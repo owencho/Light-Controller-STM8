@@ -1,4 +1,322 @@
-EESchema Schematic File Version 2
-EELAYER 25 0
+EESchema Schematic File Version 4
+EELAYER 30 0
 EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Custom_Library:PT8211 U2
+U 1 1 5E651168
+P 4900 2050
+F 0 "U2" H 5000 2125 50  0000 C CNN
+F 1 "PT8211-S" H 5000 2034 50  0000 C CNN
+F 2 "Package_SO:SOP-8_3.9x4.9mm_P1.27mm" H 4900 2050 50  0001 C CNN
+F 3 "https://www.futurlec.com/Datasheet/Others/PT8211.pdf" H 4900 2050 50  0001 C CNN
+	1    4900 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM8:STM8S003K3T U3
+U 1 1 5E654D05
+P 7550 2850
+F 0 "U3" H 7550 4431 50  0000 C CNN
+F 1 "STM8S003K3T" H 7550 4340 50  0000 C CNN
+F 2 "Package_QFP:LQFP-32_7x7mm_P0.8mm" H 7600 4350 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 7550 2850 50  0001 C CNN
+	1    7550 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VDD #PWR02
+U 1 1 5E656692
+P 4150 3300
+F 0 "#PWR02" H 4150 3150 50  0001 C CNN
+F 1 "VDD" H 4167 3473 50  0000 C CNN
+F 2 "" H 4150 3300 50  0001 C CNN
+F 3 "" H 4150 3300 50  0001 C CNN
+	1    4150 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E656C62
+P 4500 3500
+F 0 "R2" V 4293 3500 50  0000 C CNN
+F 1 "R" V 4384 3500 50  0000 C CNN
+F 2 "" V 4430 3500 50  0001 C CNN
+F 3 "~" H 4500 3500 50  0001 C CNN
+	1    4500 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5E6575F1
+P 4950 3750
+F 0 "C1" H 5065 3796 50  0000 L CNN
+F 1 "C" H 5065 3705 50  0000 L CNN
+F 2 "" H 4988 3600 50  0001 C CNN
+F 3 "~" H 4950 3750 50  0001 C CNN
+	1    4950 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5E657F50
+P 5350 3750
+F 0 "C2" H 5465 3796 50  0000 L CNN
+F 1 "C" H 5465 3705 50  0000 L CNN
+F 2 "" H 5388 3600 50  0001 C CNN
+F 3 "~" H 5350 3750 50  0001 C CNN
+	1    5350 3750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 3300 4150 3500
+Wire Wire Line
+	4150 3500 4350 3500
+Wire Wire Line
+	4650 3500 4950 3500
+Wire Wire Line
+	4950 3500 4950 3600
+Wire Wire Line
+	4950 3500 5350 3500
+Wire Wire Line
+	5350 3500 5350 3600
+Connection ~ 4950 3500
+Wire Wire Line
+	5350 3500 5450 3500
+Wire Wire Line
+	5450 3500 5450 2650
+Wire Wire Line
+	5450 2650 5350 2650
+Connection ~ 5350 3500
+$Comp
+L power:GND #PWR06
+U 1 1 5E6587AC
+P 4950 3900
+F 0 "#PWR06" H 4950 3650 50  0001 C CNN
+F 1 "GND" H 4955 3727 50  0000 C CNN
+F 2 "" H 4950 3900 50  0001 C CNN
+F 3 "" H 4950 3900 50  0001 C CNN
+	1    4950 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5E658DE3
+P 4500 2800
+F 0 "#PWR04" H 4500 2550 50  0001 C CNN
+F 1 "GND" H 4505 2627 50  0000 C CNN
+F 2 "" H 4500 2800 50  0001 C CNN
+F 3 "" H 4500 2800 50  0001 C CNN
+	1    4500 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5E65A111
+P 5350 3900
+F 0 "#PWR07" H 5350 3650 50  0001 C CNN
+F 1 "GND" H 5355 3727 50  0000 C CNN
+F 2 "" H 5350 3900 50  0001 C CNN
+F 3 "" H 5350 3900 50  0001 C CNN
+	1    5350 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2200 4400 2200
+Wire Wire Line
+	4400 2200 4400 1750
+Wire Wire Line
+	4400 1750 6800 1750
+Wire Wire Line
+	6800 1750 6800 3450
+Wire Wire Line
+	6800 3450 6950 3450
+Wire Wire Line
+	6950 3550 6550 3550
+Wire Wire Line
+	6550 3550 6550 1900
+Wire Wire Line
+	6550 1900 4300 1900
+Wire Wire Line
+	4650 2500 4300 2500
+Wire Wire Line
+	4300 1900 4300 2500
+Wire Wire Line
+	4650 2650 4500 2650
+Wire Wire Line
+	4500 2650 4500 2800
+$Comp
+L power:GND #PWR09
+U 1 1 5E65F2FA
+P 7550 4400
+F 0 "#PWR09" H 7550 4150 50  0001 C CNN
+F 1 "GND" H 7555 4227 50  0000 C CNN
+F 2 "" H 7550 4400 50  0001 C CNN
+F 3 "" H 7550 4400 50  0001 C CNN
+	1    7550 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 4250 7550 4400
+Wire Wire Line
+	5350 2200 5800 2200
+Wire Wire Line
+	5800 2200 5800 4700
+Wire Wire Line
+	5800 4700 5550 4700
+$Comp
+L Device:R R1
+U 1 1 5E65FDEC
+P 4100 5350
+F 0 "R1" V 3893 5350 50  0000 C CNN
+F 1 "R" V 3984 5350 50  0000 C CNN
+F 2 "" V 4030 5350 50  0001 C CNN
+F 3 "~" H 4100 5350 50  0001 C CNN
+	1    4100 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3750 4800 3750 5350
+Wire Wire Line
+	3750 5350 3950 5350
+Wire Wire Line
+	4250 5350 4600 5350
+Wire Wire Line
+	4600 4900 4350 4900
+$Comp
+L Device:R R3
+U 1 1 5E662426
+P 4600 5800
+F 0 "R3" V 4393 5800 50  0000 C CNN
+F 1 "R" V 4484 5800 50  0000 C CNN
+F 2 "" V 4530 5800 50  0001 C CNN
+F 3 "~" H 4600 5800 50  0001 C CNN
+	1    4600 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 6150 4600 5950
+Wire Wire Line
+	4600 4900 4600 5650
+$Comp
+L power:GND #PWR05
+U 1 1 5E662E94
+P 4600 6150
+F 0 "#PWR05" H 4600 5900 50  0001 C CNN
+F 1 "GND" H 4605 5977 50  0000 C CNN
+F 2 "" H 4600 6150 50  0001 C CNN
+F 3 "" H 4600 6150 50  0001 C CNN
+	1    4600 6150
+	1    0    0    -1  
+$EndComp
+Text GLabel 3000 4800 0    50   Input ~ 0
+OUt
+Wire Wire Line
+	3000 4800 3750 4800
+$Comp
+L power:VDD #PWR010
+U 1 1 5E663FDA
+P 8050 1300
+F 0 "#PWR010" H 8050 1150 50  0001 C CNN
+F 1 "VDD" H 8067 1473 50  0000 C CNN
+F 2 "" H 8050 1300 50  0001 C CNN
+F 3 "" H 8050 1300 50  0001 C CNN
+	1    8050 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 1450 8050 1450
+Wire Wire Line
+	8050 1450 8050 1300
+$Comp
+L Device:C C3
+U 1 1 5E6654D2
+P 5550 4950
+F 0 "C3" H 5665 4996 50  0000 L CNN
+F 1 "C" H 5665 4905 50  0000 L CNN
+F 2 "" H 5588 4800 50  0001 C CNN
+F 3 "~" H 5550 4950 50  0001 C CNN
+	1    5550 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 5300 5550 5100
+$Comp
+L power:GND #PWR08
+U 1 1 5E66669D
+P 5550 5300
+F 0 "#PWR08" H 5550 5050 50  0001 C CNN
+F 1 "GND" H 5555 5127 50  0000 C CNN
+F 2 "" H 5550 5300 50  0001 C CNN
+F 3 "" H 5550 5300 50  0001 C CNN
+	1    5550 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 4800 5550 4700
+Connection ~ 5550 4700
+Wire Wire Line
+	5550 4700 4350 4700
+$Comp
+L power:GND #PWR01
+U 1 1 5E667F17
+P 4100 2600
+F 0 "#PWR01" H 4100 2350 50  0001 C CNN
+F 1 "GND" H 4105 2427 50  0000 C CNN
+F 2 "" H 4100 2600 50  0001 C CNN
+F 3 "" H 4100 2600 50  0001 C CNN
+	1    4100 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2350 4100 2350
+Wire Wire Line
+	4100 2350 4100 2600
+$Comp
+L dk_Linear-Amplifiers-Instrumentation-OP-Amps-Buffer-Amps:LM358DR U1
+U 1 1 5E66A32C
+P 4050 4800
+F 0 "U1" H 4550 4600 60  0000 C CNN
+F 1 "LM358DR" H 4400 4700 60  0000 C CNN
+F 2 "digikey-footprints:SOIC-8_W3.9mm" H 4250 5000 60  0001 L CNN
+F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm358" H 4250 5100 60  0001 L CNN
+F 4 "296-1014-1-ND" H 4250 5200 60  0001 L CNN "Digi-Key_PN"
+F 5 "LM358DR" H 4250 5300 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 4250 5400 60  0001 L CNN "Category"
+F 7 "Linear - Amplifiers - Instrumentation, OP Amps, Buffer Amps" H 4250 5500 60  0001 L CNN "Family"
+F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm358" H 4250 5600 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/LM358DR/296-1014-1-ND/404838" H 4250 5700 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC OPAMP GP 2 CIRCUIT 8SOIC" H 4250 5800 60  0001 L CNN "Description"
+F 11 "Texas Instruments" H 4250 5900 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 4250 6000 60  0001 L CNN "Status"
+	1    4050 4800
+	-1   0    0    1   
+$EndComp
+Connection ~ 3750 4800
+$Comp
+L power:GND #PWR03
+U 1 1 5E66FB93
+P 4350 4450
+F 0 "#PWR03" H 4350 4200 50  0001 C CNN
+F 1 "GND" H 4355 4277 50  0000 C CNN
+F 2 "" H 4350 4450 50  0001 C CNN
+F 3 "" H 4350 4450 50  0001 C CNN
+	1    4350 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 4600 4050 4450
+Wire Wire Line
+	4050 4450 4350 4450
 $EndSCHEMATC
