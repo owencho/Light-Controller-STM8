@@ -36,7 +36,7 @@ U 1 1 5E65FDEC
 P 2100 3350
 F 0 "R1" V 2300 3350 50  0000 C CNN
 F 1 "R" V 2200 3350 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 2030 3350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2030 3350 50  0001 C CNN
 F 3 "~" H 2100 3350 50  0001 C CNN
 	1    2100 3350
 	0    1    1    0   
@@ -62,8 +62,6 @@ F 3 "" H 2600 3650 50  0001 C CNN
 	1    2600 3650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1000 2800 1750 2800
 $Comp
 L Device:C C3
 U 1 1 5E6654D2
@@ -90,29 +88,13 @@ F 3 "" H 2850 3300 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2850 2800 2850 2700
-Connection ~ 1750 2800
-$Comp
-L power:GND #PWR03
-U 1 1 5E66FB93
-P 2350 2450
-F 0 "#PWR03" H 2350 2200 50  0001 C CNN
-F 1 "GND" H 2355 2277 50  0000 C CNN
-F 2 "" H 2350 2450 50  0001 C CNN
-F 3 "" H 2350 2450 50  0001 C CNN
-	1    2350 2450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 2600 2050 2450
-Wire Wire Line
-	2050 2450 2350 2450
 $Comp
 L Device:R R3
 U 1 1 5E662426
 P 2600 3500
 F 0 "R3" V 2393 3500 50  0000 C CNN
 F 1 "R" V 2484 3500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 2530 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2530 3500 50  0001 C CNN
 F 3 "~" H 2600 3500 50  0001 C CNN
 	1    2600 3500
 	1    0    0    -1  
@@ -152,80 +134,6 @@ Text Label 800  1250 0    50   ~ 0
 SPI_MOSI
 Text Label 9950 1700 0    50   ~ 0
 SWIM
-$Comp
-L dk_Optoisolators-Transistor-Photovoltaic-Output:LTV-356T U5
-U 1 1 5E68963D
-P 4400 6650
-F 0 "U5" H 4400 6997 60  0000 C CNN
-F 1 "LTV-356T" H 4400 6891 60  0000 C CNN
-F 2 "digikey-footprints:SMD-4_4.4x3.85mm_P2.54mm" H 4600 6850 60  0001 L CNN
-F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/LTV-356T%20series%20201610.pdf" V 4600 6950 60  0001 L CNN
-F 4 "160-1337-1-ND" H 4600 7050 60  0001 L CNN "Digi-Key_PN"
-F 5 "LTV-356T" H 4600 7150 60  0001 L CNN "MPN"
-F 6 "Isolators" H 4600 7250 60  0001 L CNN "Category"
-F 7 "Optoisolators - Transistor, Photovoltaic Output" H 4600 7350 60  0001 L CNN "Family"
-F 8 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/LTV-356T%20series%20201610.pdf" H 4600 7450 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/lite-on-inc/LTV-356T/160-1337-1-ND/385805" H 4600 7550 60  0001 L CNN "DK_Detail_Page"
-F 10 "OPTOISOLATOR 3.75KV TRANS 4-SOP" H 4600 7650 60  0001 L CNN "Description"
-F 11 "Lite-On Inc." H 4600 7750 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 4600 7850 60  0001 L CNN "Status"
-	1    4400 6650
-	1    0    0    -1  
-$EndComp
-Text Label 3600 6550 0    50   ~ 0
-UART_TX
-Wire Wire Line
-	3400 6550 4100 6550
-$Comp
-L power:GND #PWR0101
-U 1 1 5E691B2E
-P 4050 6800
-F 0 "#PWR0101" H 4050 6550 50  0001 C CNN
-F 1 "GND" H 4055 6627 50  0000 C CNN
-F 2 "" H 4050 6800 50  0001 C CNN
-F 3 "" H 4050 6800 50  0001 C CNN
-	1    4050 6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4100 6750 4050 6750
-Wire Wire Line
-	4050 6750 4050 6800
-$Comp
-L dk_Optoisolators-Transistor-Photovoltaic-Output:LTV-356T U4
-U 1 1 5E694F8D
-P 4400 6000
-F 0 "U4" H 4400 6347 60  0000 C CNN
-F 1 "LTV-356T" H 4400 6241 60  0000 C CNN
-F 2 "digikey-footprints:SMD-4_4.4x3.85mm_P2.54mm" H 4600 6200 60  0001 L CNN
-F 3 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/LTV-356T%20series%20201610.pdf" V 4600 6300 60  0001 L CNN
-F 4 "160-1337-1-ND" H 4600 6400 60  0001 L CNN "Digi-Key_PN"
-F 5 "LTV-356T" H 4600 6500 60  0001 L CNN "MPN"
-F 6 "Isolators" H 4600 6600 60  0001 L CNN "Category"
-F 7 "Optoisolators - Transistor, Photovoltaic Output" H 4600 6700 60  0001 L CNN "Family"
-F 8 "http://optoelectronics.liteon.com/upload/download/DS70-2001-010/LTV-356T%20series%20201610.pdf" H 4600 6800 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/lite-on-inc/LTV-356T/160-1337-1-ND/385805" H 4600 6900 60  0001 L CNN "DK_Detail_Page"
-F 10 "OPTOISOLATOR 3.75KV TRANS 4-SOP" H 4600 7000 60  0001 L CNN "Description"
-F 11 "Lite-On Inc." H 4600 7100 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 4600 7200 60  0001 L CNN "Status"
-	1    4400 6000
-	-1   0    0    -1  
-$EndComp
-Text Label 3900 6100 2    50   ~ 0
-UART_RX
-Wire Wire Line
-	4100 6100 3300 6100
-$Comp
-L Regulator_Linear:TLV1117-50 U6
-U 1 1 5E69B607
-P 1600 6200
-F 0 "U6" H 1600 6442 50  0000 C CNN
-F 1 "TLV1117-50" H 1600 6351 50  0000 C CNN
-F 2 "" H 1600 6200 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/tlv1117.pdf" H 1600 6200 50  0001 C CNN
-	1    1600 6200
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	1600 6500 1600 6650
 $Comp
@@ -239,28 +147,13 @@ F 3 "" H 1600 6650 50  0001 C CNN
 	1    1600 6650
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+12V #PWR0103
-U 1 1 5E6A01CF
-P 2250 6150
-F 0 "#PWR0103" H 2250 6000 50  0001 C CNN
-F 1 "+12V" H 2265 6323 50  0000 C CNN
-F 2 "" H 2250 6150 50  0001 C CNN
-F 3 "" H 2250 6150 50  0001 C CNN
-	1    2250 6150
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2250 6150 2250 6200
-Wire Wire Line
-	2250 6200 1900 6200
 Wire Wire Line
 	9050 1000 9050 800 
 Wire Wire Line
 	1300 6200 750  6200
 Text Label 800  6200 0    50   ~ 0
 5V_SUPPLY
-Text Label 9100 950  0    50   ~ 0
+Text Label 9050 950  0    50   ~ 0
 5V_SUPPLY
 $Comp
 L MCU_ST_STM8:STM8S003F3P U3
@@ -276,83 +169,68 @@ $EndComp
 $Comp
 L Device:R R2
 U 1 1 5E656C62
-P 2350 1400
-F 0 "R2" V 2250 1400 50  0000 C CNN
-F 1 "R" V 2350 1400 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 2280 1400 50  0001 C CNN
-F 3 "~" H 2350 1400 50  0001 C CNN
-	1    2350 1400
+P 2400 1400
+F 0 "R2" V 2300 1400 50  0000 C CNN
+F 1 "R" V 2400 1400 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 2330 1400 50  0001 C CNN
+F 3 "~" H 2400 1400 50  0001 C CNN
+	1    2400 1400
 	0    -1   1    0   
 $EndComp
 $Comp
 L Device:C C1
 U 1 1 5E6575F1
-P 2200 1650
-F 0 "C1" H 2000 1700 50  0000 L CNN
-F 1 "C" H 2050 1600 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2238 1500 50  0001 C CNN
-F 3 "~" H 2200 1650 50  0001 C CNN
-	1    2200 1650
+P 2250 1650
+F 0 "C1" H 2050 1700 50  0000 L CNN
+F 1 "C" H 2100 1600 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2288 1500 50  0001 C CNN
+F 3 "~" H 2250 1650 50  0001 C CNN
+	1    2250 1650
 	-1   0    0    -1  
 $EndComp
 $Comp
 L Device:C C2
 U 1 1 5E657F50
-P 1950 1650
-F 0 "C2" H 2065 1696 50  0000 L CNN
-F 1 "C" H 2065 1605 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 1988 1500 50  0001 C CNN
-F 3 "~" H 1950 1650 50  0001 C CNN
-	1    1950 1650
+P 2000 1650
+F 0 "C2" H 2115 1696 50  0000 L CNN
+F 1 "C" H 2115 1605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2038 1500 50  0001 C CNN
+F 3 "~" H 2000 1650 50  0001 C CNN
+	1    2000 1650
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 1400 2200 1500
+	2250 1400 2250 1500
 Wire Wire Line
-	1950 1400 1950 1500
+	2000 1400 2000 1500
 $Comp
 L power:GND #PWR06
 U 1 1 5E6587AC
-P 2200 1800
-F 0 "#PWR06" H 2200 1550 50  0001 C CNN
-F 1 "GND" H 2205 1627 50  0000 C CNN
-F 2 "" H 2200 1800 50  0001 C CNN
-F 3 "" H 2200 1800 50  0001 C CNN
-	1    2200 1800
+P 2250 1850
+F 0 "#PWR06" H 2250 1600 50  0001 C CNN
+F 1 "GND" H 2255 1677 50  0000 C CNN
+F 2 "" H 2250 1850 50  0001 C CNN
+F 3 "" H 2250 1850 50  0001 C CNN
+	1    2250 1850
 	-1   0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR07
 U 1 1 5E65A111
-P 1950 1800
-F 0 "#PWR07" H 1950 1550 50  0001 C CNN
-F 1 "GND" H 1955 1627 50  0000 C CNN
-F 2 "" H 1950 1800 50  0001 C CNN
-F 3 "" H 1950 1800 50  0001 C CNN
-	1    1950 1800
+P 2000 1850
+F 0 "#PWR07" H 2000 1600 50  0001 C CNN
+F 1 "GND" H 2005 1677 50  0000 C CNN
+F 2 "" H 2000 1850 50  0001 C CNN
+F 3 "" H 2000 1850 50  0001 C CNN
+	1    2000 1850
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	1900 1400 1950 1400
 Text Label 3100 2700 0    50   ~ 0
 RCH
 Wire Wire Line
 	1900 950  2400 950 
 Text Label 2350 950  0    50   ~ 0
 RCH
-$Comp
-L power:+12V #PWR0104
-U 1 1 5E6C10B2
-P 2050 3050
-F 0 "#PWR0104" H 2050 2900 50  0001 C CNN
-F 1 "+12V" H 2065 3223 50  0000 C CNN
-F 2 "" H 2050 3050 50  0001 C CNN
-F 3 "" H 2050 3050 50  0001 C CNN
-	1    2050 3050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	2050 3000 2050 3050
 Wire Wire Line
 	2350 2700 2850 2700
 Connection ~ 2850 2700
@@ -364,40 +242,11 @@ Text Notes 10400 1900 0    50   ~ 0
 reserved for sensor\n
 Text Notes 7700 1700 2    50   ~ 0
 reserved for sensor\n
-Text Notes 700  3200 0    50   ~ 0
+Text Notes 600  3600 0    50   ~ 0
 Output signal 0 to 10V\nto the power supply\n for LED intensity\n\n
-Text Label 4700 6500 0    50   ~ 0
-5V_SUPPLY
-Wire Wire Line
-	4900 6550 4700 6550
-Text Label 5000 6750 0    50   ~ 0
-RX_in
-Text Label 3700 5850 0    50   ~ 0
-5V_SUPPLY
-Wire Wire Line
-	4100 5900 3900 5900
-$Comp
-L power:VSS #PWR0105
-U 1 1 5E6BE216
-P 5000 6100
-F 0 "#PWR0105" H 5000 5950 50  0001 C CNN
-F 1 "VSS" H 5018 6273 50  0000 C CNN
-F 2 "" H 5000 6100 50  0001 C CNN
-F 3 "" H 5000 6100 50  0001 C CNN
-	1    5000 6100
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5000 6100 4700 6100
-Text Label 5000 5900 0    50   ~ 0
-TX_in
-Wire Wire Line
-	4700 6750 5300 6750
-Wire Wire Line
-	4700 5900 5300 5900
-Text Notes 700  2300 0    50   ~ 0
+Text Notes 550  2400 0    118  ~ 0
 DAC Amplifier
-Text Notes 850  3300 0    50   ~ 0
+Text Notes 750  3700 0    50   ~ 0
 gain is 3x\n
 Wire Wire Line
 	9650 1900 10150 1900
@@ -416,8 +265,6 @@ Wire Wire Line
 Wire Wire Line
 	7950 1700 8450 1700
 Wire Wire Line
-	7950 2100 8450 2100
-Wire Wire Line
 	7950 2400 8450 2400
 Wire Wire Line
 	7950 2000 8450 2000
@@ -431,12 +278,12 @@ U 1 1 5E6E69A7
 P 1450 4700
 F 0 "R4" V 1550 4700 50  0000 C CNN
 F 1 "R" V 1450 4700 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 1380 4700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 1380 4700 50  0001 C CNN
 F 3 "~" H 1450 4700 50  0001 C CNN
 	1    1450 4700
 	1    0    0    -1  
 $EndComp
-Text Label 1500 4500 0    50   ~ 0
+Text Label 1450 4500 0    50   ~ 0
 5V_SUPPLY
 Wire Wire Line
 	1450 4550 1450 4350
@@ -465,15 +312,13 @@ Text Label 7950 1800 0    50   ~ 0
 PB5
 Text Label 7950 2000 0    50   ~ 0
 WS
-Text Label 7950 2100 0    50   ~ 0
-PC4
 Text Label 7950 2400 0    50   ~ 0
 PC7
 Wire Wire Line
 	8450 2600 7950 2600
 Wire Wire Line
 	8450 2700 7950 2700
-Text Notes 700  4300 0    50   ~ 0
+Text Notes 550  4200 0    118  ~ 0
 Reset Circuit
 Text Label 7950 2600 0    50   ~ 0
 RESET
@@ -485,40 +330,11 @@ Text Label 9800 1900 0    50   ~ 0
 V_SENSOR
 Wire Wire Line
 	1350 4950 1450 4950
-$Comp
-L Device:C C4
-U 1 1 5E6FA49B
-P 1150 5150
-F 0 "C4" V 1300 5250 50  0000 C CNN
-F 1 "C" V 1300 5150 50  0000 C CNN
-F 2 "" H 1188 5000 50  0001 C CNN
-F 3 "~" H 1150 5150 50  0001 C CNN
-	1    1150 5150
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	800  5150 950  5150
 Wire Wire Line
 	1300 5150 1450 5150
 Wire Wire Line
 	1450 5150 1450 4950
 Connection ~ 1450 4950
-Wire Wire Line
-	950  4950 950  5150
-Connection ~ 950  5150
-Wire Wire Line
-	950  5150 1000 5150
-$Comp
-L Switch:SW_SPST SW1
-U 1 1 5E703D46
-P 1150 4950
-F 0 "SW1" H 1150 5185 50  0000 C CNN
-F 1 "SW_SPST" H 1150 5094 50  0000 C CNN
-F 2 "" H 1150 4950 50  0001 C CNN
-F 3 "~" H 1150 4950 50  0001 C CNN
-	1    1150 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1450 5150 1750 5150
 Connection ~ 1450 5150
@@ -543,48 +359,21 @@ Text Label 800  1100 0    50   ~ 0
 WS
 Text Label 800  950  0    50   ~ 0
 SPI_SCK
-Connection ~ 1950 1400
 Wire Wire Line
-	1950 1400 2200 1400
-Connection ~ 2200 1400
+	2000 1400 2250 1400
+Connection ~ 2250 1400
 Wire Wire Line
-	2500 1400 2700 1400
-Text Label 2500 1500 0    50   ~ 0
+	2550 1400 2750 1400
+Text Label 2600 1400 0    50   ~ 0
 5V_SUPPLY
-Text Notes 800  650  0    50   ~ 0
-External DAC
 Connection ~ 2600 3350
-Text Notes 750  5650 0    50   ~ 0
-Low drop-out regulator
-Text Notes 7200 600  0    50   ~ 0
-Microcontroller STM8
 $Comp
-L dk_Linear-Amplifiers-Instrumentation-OP-Amps-Buffer-Amps:LM358DR U1
-U 2 1 5E76C1FA
-P 4550 2800
-F 0 "U1" H 4950 2550 60  0000 C CNN
-F 1 "LM358DR" H 4850 2650 60  0000 C CNN
-F 2 "digikey-footprints:SOIC-8_W3.9mm" H 4750 3000 60  0001 L CNN
-F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm358" H 4750 3100 60  0001 L CNN
-F 4 "296-1014-1-ND" H 4750 3200 60  0001 L CNN "Digi-Key_PN"
-F 5 "LM358DR" H 4750 3300 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 4750 3400 60  0001 L CNN "Category"
-F 7 "Linear - Amplifiers - Instrumentation, OP Amps, Buffer Amps" H 4750 3500 60  0001 L CNN "Family"
-F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm358" H 4750 3600 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/texas-instruments/LM358DR/296-1014-1-ND/404838" H 4750 3700 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC OPAMP GP 2 CIRCUIT 8SOIC" H 4750 3800 60  0001 L CNN "Description"
-F 11 "Texas Instruments" H 4750 3900 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 4750 4000 60  0001 L CNN "Status"
-	2    4550 2800
-	-1   0    0    1   
-$EndComp
-$Comp
-L Device:R R?
+L Device:R R5
 U 1 1 5E77157A
 P 4450 3350
-F 0 "R?" V 4650 3350 50  0000 C CNN
+F 0 "R5" V 4650 3350 50  0000 C CNN
 F 1 "R" V 4550 3350 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 4380 3350 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4380 3350 50  0001 C CNN
 F 3 "~" H 4450 3350 50  0001 C CNN
 	1    4450 3350
 	0    1    1    0   
@@ -594,10 +383,10 @@ Wire Wire Line
 Wire Wire Line
 	4950 2900 4950 3350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0107
 U 1 1 5E771584
 P 4950 3650
-F 0 "#PWR?" H 4950 3400 50  0001 C CNN
+F 0 "#PWR0107" H 4950 3400 50  0001 C CNN
 F 1 "GND" H 4955 3477 50  0000 C CNN
 F 2 "" H 4950 3650 50  0001 C CNN
 F 3 "" H 4950 3650 50  0001 C CNN
@@ -605,12 +394,12 @@ F 3 "" H 4950 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 5E77158A
 P 4950 3500
-F 0 "R?" V 4743 3500 50  0000 C CNN
+F 0 "R6" V 4743 3500 50  0000 C CNN
 F 1 "R" V 4834 3500 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 4880 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4880 3500 50  0001 C CNN
 F 3 "~" H 4950 3500 50  0001 C CNN
 	1    4950 3500
 	1    0    0    -1  
@@ -619,10 +408,10 @@ Connection ~ 4950 3350
 Wire Wire Line
 	4950 2900 4850 2900
 $Comp
-L Device:C C?
+L Device:C C5
 U 1 1 5E77749C
 P 5350 2950
-F 0 "C?" H 5465 2996 50  0000 L CNN
+F 0 "C5" H 5465 2996 50  0000 L CNN
 F 1 "C" H 5465 2905 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 5388 2800 50  0001 C CNN
 F 3 "~" H 5350 2950 50  0001 C CNN
@@ -632,10 +421,10 @@ $EndComp
 Wire Wire Line
 	5350 3300 5350 3100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0108
 U 1 1 5E7774A3
 P 5350 3300
-F 0 "#PWR?" H 5350 3050 50  0001 C CNN
+F 0 "#PWR0108" H 5350 3050 50  0001 C CNN
 F 1 "GND" H 5355 3127 50  0000 C CNN
 F 2 "" H 5350 3300 50  0001 C CNN
 F 3 "" H 5350 3300 50  0001 C CNN
@@ -646,26 +435,6 @@ Wire Wire Line
 	5350 2800 5350 2700
 Wire Wire Line
 	4850 2700 5350 2700
-$Comp
-L dk_Linear-Amplifiers-Instrumentation-OP-Amps-Buffer-Amps:LM358DR U1
-U 1 1 5E66A32C
-P 2050 2800
-F 0 "U1" H 2550 2600 60  0000 C CNN
-F 1 "LM358DR" H 2400 2700 60  0000 C CNN
-F 2 "digikey-footprints:SOIC-8_W3.9mm" H 2250 3000 60  0001 L CNN
-F 3 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm358" H 2250 3100 60  0001 L CNN
-F 4 "296-1014-1-ND" H 2250 3200 60  0001 L CNN "Digi-Key_PN"
-F 5 "LM358DR" H 2250 3300 60  0001 L CNN "MPN"
-F 6 "Integrated Circuits (ICs)" H 2250 3400 60  0001 L CNN "Category"
-F 7 "Linear - Amplifiers - Instrumentation, OP Amps, Buffer Amps" H 2250 3500 60  0001 L CNN "Family"
-F 8 "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm358" H 2250 3600 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/texas-instruments/LM358DR/296-1014-1-ND/404838" H 2250 3700 60  0001 L CNN "DK_Detail_Page"
-F 10 "IC OPAMP GP 2 CIRCUIT 8SOIC" H 2250 3800 60  0001 L CNN "Description"
-F 11 "Texas Instruments" H 2250 3900 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 2250 4000 60  0001 L CNN "Status"
-	1    2050 2800
-	-1   0    0    1   
-$EndComp
 Text Label 3800 2800 0    50   ~ 0
 C_SENSOR
 Wire Wire Line
@@ -677,9 +446,7 @@ Wire Wire Line
 Connection ~ 4200 2800
 Wire Wire Line
 	4200 2800 4250 2800
-Text Notes 3750 2250 0    50   ~ 0
-Current Sensor
-Text Notes 3750 2100 0    50   ~ 0
+Text Notes 4150 3750 0    50   ~ 0
 gain 100 to 600
 Wire Wire Line
 	5650 2800 5650 2700
@@ -689,10 +456,10 @@ Connection ~ 5350 2700
 Wire Wire Line
 	5650 3300 5650 3100
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0109
 U 1 1 5E7B6689
 P 5650 3300
-F 0 "#PWR?" H 5650 3050 50  0001 C CNN
+F 0 "#PWR0109" H 5650 3050 50  0001 C CNN
 F 1 "GND" H 5655 3127 50  0000 C CNN
 F 2 "" H 5650 3300 50  0001 C CNN
 F 3 "" H 5650 3300 50  0001 C CNN
@@ -705,16 +472,427 @@ Connection ~ 5650 2700
 Text Label 5750 2700 0    50   ~ 0
 CURRENT_IN
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 5E7AC3E6
 P 5650 2950
-F 0 "R?" V 5850 2950 50  0000 C CNN
+F 0 "R7" V 5850 2950 50  0000 C CNN
 F 1 "0.01Ω" V 5750 2950 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" V 5580 2950 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5580 2950 50  0001 C CNN
 F 3 "~" H 5650 2950 50  0001 C CNN
 	1    5650 2950
 	1    0    0    1   
 $EndComp
 Wire Notes Line
 	5550 2450 5550 3650
+Wire Wire Line
+	2250 1800 2250 1850
+Wire Wire Line
+	2000 1800 2000 1850
+Wire Wire Line
+	2000 1400 1900 1400
+Connection ~ 2000 1400
+$Comp
+L Amplifier_Operational:LM358 U1
+U 3 1 5E6B06E4
+P 2250 2800
+F 0 "U1" H 1900 2950 50  0000 R CNN
+F 1 "LM358" H 2000 3050 50  0000 R CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2250 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2250 2800 50  0001 C CNN
+	3    2250 2800
+	1    0    0    1   
+$EndComp
+Text Notes 3750 2250 0    118  ~ 0
+Current Sensor
+$Comp
+L Amplifier_Operational:LM358 U1
+U 2 1 5E6B73DD
+P 4550 2800
+F 0 "U1" H 4550 3167 50  0000 C CNN
+F 1 "LM358" H 4550 3076 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 4550 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 4550 2800 50  0001 C CNN
+	2    4550 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:LM358 U1
+U 1 1 5E6AD63B
+P 2050 2800
+F 0 "U1" H 2200 2900 50  0000 C CNN
+F 1 "LM358" H 2150 3000 50  0000 C CNN
+F 2 "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" H 2050 2800 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/lm2904-n.pdf" H 2050 2800 50  0001 C CNN
+	1    2050 2800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5E6D9B7A
+P 2150 2500
+F 0 "#PWR0110" H 2150 2250 50  0001 C CNN
+F 1 "GND" H 2155 2327 50  0000 C CNN
+F 2 "" H 2150 2500 50  0001 C CNN
+F 3 "" H 2150 2500 50  0001 C CNN
+	1    2150 2500
+	1    0    0    1   
+$EndComp
+Text Label 7950 2100 0    50   ~ 0
+PC4
+Wire Wire Line
+	7950 2100 8450 2100
+Wire Wire Line
+	3750 7000 3750 7050
+$Comp
+L Device:R R8
+U 1 1 5E6F4EDB
+P 3900 7000
+F 0 "R8" V 3693 7000 50  0000 C CNN
+F 1 "R" V 3784 7000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3830 7000 50  0001 C CNN
+F 3 "~" H 3900 7000 50  0001 C CNN
+	1    3900 7000
+	0    -1   -1   0   
+$EndComp
+Text Label 5000 5900 0    50   ~ 0
+TX_in
+Wire Wire Line
+	4100 6100 4050 6100
+Text Label 3900 6100 2    50   ~ 0
+UART_RX
+Wire Wire Line
+	4100 7000 4050 7000
+$Comp
+L power:GND #PWR0101
+U 1 1 5E691B2E
+P 3750 7050
+F 0 "#PWR0101" H 3750 6800 50  0001 C CNN
+F 1 "GND" H 3755 6877 50  0000 C CNN
+F 2 "" H 3750 7050 50  0001 C CNN
+F 3 "" H 3750 7050 50  0001 C CNN
+	1    3750 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 6800 4100 6800
+Text Label 3600 6800 0    50   ~ 0
+UART_TX
+Text Notes 4000 5300 0    50   ~ 0
+Different Power Domain
+Text Notes 3850 5450 0    50   ~ 0
+LDO 5V
+Text Notes 4700 5450 0    50   ~ 0
+External 5V
+$Comp
+L Regulator_Linear:AMS1117-5.0 U6
+U 1 1 5E70587E
+P 1600 6200
+F 0 "U6" H 1600 6442 50  0000 C CNN
+F 1 "AMS1117-5.0" H 1600 6351 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223" H 1600 6400 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1700 5950 50  0001 C CNN
+	1    1600 6200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 6400 4050 6450
+$Comp
+L Device:R R9
+U 1 1 5E70C434
+P 4050 6250
+F 0 "R9" V 3843 6250 50  0000 C CNN
+F 1 "R" V 3934 6250 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3980 6250 50  0001 C CNN
+F 3 "~" H 4050 6250 50  0001 C CNN
+	1    4050 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 5E70C43B
+P 4050 6450
+F 0 "#PWR0105" H 4050 6200 50  0001 C CNN
+F 1 "GND" H 4055 6277 50  0000 C CNN
+F 2 "" H 4050 6450 50  0001 C CNN
+F 3 "" H 4050 6450 50  0001 C CNN
+	1    4050 6450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4050 6100
+Wire Wire Line
+	3300 6100 4050 6100
+Wire Wire Line
+	5500 6250 5500 6300
+Wire Wire Line
+	4750 7000 4700 7000
+$Comp
+L Device:R R11
+U 1 1 5E71835A
+P 4900 7000
+F 0 "R11" V 4693 7000 50  0000 C CNN
+F 1 "1K" V 4784 7000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4830 7000 50  0001 C CNN
+F 3 "~" H 4900 7000 50  0001 C CNN
+	1    4900 7000
+	0    -1   -1   0   
+$EndComp
+Text Label 5450 7000 0    50   ~ 0
+RX_in
+$Comp
+L Device:C C7
+U 1 1 5E72791C
+P 5500 6450
+F 0 "C7" H 5615 6541 50  0000 L CNN
+F 1 "470uF" H 5615 6450 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 5538 6300 50  0001 C CNN
+F 3 "~" H 5500 6450 50  0001 C CNN
+F 4 "6.3x7.7mm" H 5615 6359 50  0000 L CNN "size"
+	1    5500 6450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 6800 4750 6800
+Wire Wire Line
+	4750 6800 4750 6600
+Wire Wire Line
+	4750 6600 5100 6600
+Wire Wire Line
+	5400 6900 5100 6900
+Text Label 5100 6900 0    50   ~ 0
+EXT_GND
+Wire Wire Line
+	5150 6400 5150 6100
+Text Label 5150 6100 3    50   ~ 0
+EXT_GND
+$Comp
+L Device:R R10
+U 1 1 5E762806
+P 4850 6100
+F 0 "R10" V 4643 6100 50  0000 C CNN
+F 1 "R" V 4734 6100 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4780 6100 50  0001 C CNN
+F 3 "~" H 4850 6100 50  0001 C CNN
+	1    4850 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5150 6100 5000 6100
+Wire Wire Line
+	5050 7000 6150 7000
+Wire Wire Line
+	6150 5900 6150 6450
+Text Label 3600 5900 0    50   ~ 0
+5V_SUPPLY
+$Comp
+L Custom_Library:EL357N-C U8
+U 1 1 5E796BCA
+P 4400 6650
+F 0 "U8" H 4400 6725 50  0000 C CNN
+F 1 "EL357N-C" H 4400 6634 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 4400 6650 50  0001 C CNN
+F 3 "" H 4400 6650 50  0001 C CNN
+	1    4400 6650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3600 5900 4100 5900
+$Comp
+L Custom_Library:EL357N-C U7
+U 1 1 5E795D5E
+P 4400 5750
+F 0 "U7" H 4400 5825 50  0000 C CNN
+F 1 "EL357N-C" H 4400 5734 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 4400 5750 50  0001 C CNN
+F 3 "" H 4400 5750 50  0001 C CNN
+	1    4400 5750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	800  5150 950  5150
+Wire Wire Line
+	950  5150 1000 5150
+Connection ~ 950  5150
+Wire Wire Line
+	950  4950 950  5150
+$Comp
+L Custom_Library:tact_sw U5
+U 1 1 5E7C7DF7
+P 1150 4800
+F 0 "U5" H 1150 4935 50  0000 C CNN
+F 1 "tact_sw" H 1150 4844 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_SKQG_WithStem" H 1150 4800 50  0001 C CNN
+F 3 "" H 1150 4800 50  0001 C CNN
+	1    1150 4800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 6600 5500 6600
+Connection ~ 5100 6600
+$Comp
+L Custom_Library:SMD_2062 U4
+U 1 1 5E73AC04
+P 850 2650
+F 0 "U4" H 700 2750 50  0000 L CNN
+F 1 "SMD_2062" H 600 2650 50  0000 L CNN
+F 2 "Custom_footprint_lib:LEDSMD2062" H 850 2650 50  0001 C CNN
+F 3 "" H 850 2650 50  0001 C CNN
+	1    850  2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2800 1100 2800
+Connection ~ 1750 2800
+$Comp
+L power:GND #PWR0111
+U 1 1 5E74824C
+P 1250 3000
+F 0 "#PWR0111" H 1250 2750 50  0001 C CNN
+F 1 "GND" H 1255 2827 50  0000 C CNN
+F 2 "" H 1250 3000 50  0001 C CNN
+F 3 "" H 1250 3000 50  0001 C CNN
+	1    1250 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 2950 1250 2950
+Wire Wire Line
+	1250 2950 1250 3000
+$Comp
+L Custom_Library:PH2.0_horizontal U10
+U 1 1 5E74E69C
+P 9900 4200
+F 0 "U10" H 10128 4051 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 10128 3960 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9900 4200 50  0001 C CNN
+F 3 "" H 9900 4200 50  0001 C CNN
+	1    9900 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Custom_Library:PH2.0_horizontal U11
+U 1 1 5E74F107
+P 9900 4700
+F 0 "U11" H 10128 4551 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 10128 4460 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9900 4700 50  0001 C CNN
+F 3 "" H 9900 4700 50  0001 C CNN
+	1    9900 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 6450 6500 6450
+Connection ~ 6150 6450
+Wire Wire Line
+	6150 6450 6150 7000
+Text Label 6250 6450 0    50   ~ 0
+Tx_Rx
+Wire Wire Line
+	9300 4300 9600 4300
+Text Label 9400 4300 0    50   ~ 0
+Tx_Rx
+Text Label 9300 4950 0    50   ~ 0
+EXT_GND
+Wire Wire Line
+	9300 4950 9650 4950
+Wire Notes Line
+	4400 5350 4400 7400
+Text Notes 2950 5050 0    118  ~ 0
+opto_isolator for UART
+Wire Wire Line
+	9650 4800 9200 4800
+Text Label 9200 4800 0    50   ~ 0
+5V_EXT
+Text Notes 9200 3500 0    118  ~ 0
+Connection to STM32
+$Comp
+L Custom_Library:PH2.0_horizontal U9
+U 1 1 5E74D8D5
+P 9900 3600
+F 0 "U9" H 10128 3451 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 10128 3360 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-K_1x02_P2.00mm_Horizontal" H 9900 3600 50  0001 C CNN
+F 3 "" H 9900 3600 50  0001 C CNN
+	1    9900 3600
+	1    0    0    -1  
+$EndComp
+Text Notes 450  650  0    118  ~ 0
+External DAC
+Text Notes 500  5750 0    118  ~ 0
+Low drop-out regulator
+Text Notes 7000 850  0    118  ~ 0
+Microcontroller STM8
+Wire Wire Line
+	4700 5900 5500 5900
+$Comp
+L Diode:1N5819 D1
+U 1 1 5E7897CA
+P 5500 6100
+F 0 "D1" V 5546 6021 50  0000 R CNN
+F 1 "1N5819HW" V 5455 6021 50  0000 R CNN
+F 2 "Diode_SMD:D_SOD-123" H 5500 5925 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88525/1n5817.pdf" H 5500 6100 50  0001 C CNN
+	1    5500 6100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5500 5950 5500 5900
+Connection ~ 5500 5900
+Wire Wire Line
+	5500 5900 6150 5900
+$Comp
+L Device:C C4
+U 1 1 5E6FA49B
+P 1150 5150
+F 0 "C4" V 1300 5250 50  0000 C CNN
+F 1 "C" V 1300 5150 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1188 5000 50  0001 C CNN
+F 3 "~" H 1150 5150 50  0001 C CNN
+	1    1150 5150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5E75411E
+P 5100 6750
+F 0 "C6" V 5250 6850 50  0000 C CNN
+F 1 "C" V 5250 6750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5138 6600 50  0001 C CNN
+F 3 "~" H 5100 6750 50  0001 C CNN
+	1    5100 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 4450 9600 4450
+Wire Wire Line
+	9600 4450 9600 4300
+Connection ~ 9600 4300
+Wire Wire Line
+	9600 4300 9650 4300
+Wire Wire Line
+	9550 3850 9550 4000
+$Comp
+L power:GND #PWR?
+U 1 1 5E76470F
+P 9550 4000
+F 0 "#PWR?" H 9550 3750 50  0001 C CNN
+F 1 "GND" H 9555 3827 50  0000 C CNN
+F 2 "" H 9550 4000 50  0001 C CNN
+F 3 "" H 9550 4000 50  0001 C CNN
+	1    9550 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 3850 9550 3850
+Wire Wire Line
+	1900 6200 2150 6200
+Text Label 2150 6200 0    50   ~ 0
+12V_INPUT
+Wire Wire Line
+	9650 3700 9200 3700
+Text Label 9200 3700 0    50   ~ 0
+12V_INPUT
+Wire Wire Line
+	2150 3100 2150 3200
+Text Label 2150 3200 0    50   ~ 0
+12V_INPUT
 $EndSCHEMATC

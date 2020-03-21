@@ -1,3 +1,5 @@
 (fp_lib_table
   (lib (name digikey-footprints)(type KiCad)(uri C:/Users/owen/Downloads/digikey-kicad-library-master/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name lib)(type KiCad)(uri ${KIPRJMOD}/lib)(options "")(descr ""))
+  (lib (name Custom_footprint_lib)(type KiCad)(uri ${KIPRJMOD}/Custom_footprint_lib.pretty)(options "")(descr ""))
 )
