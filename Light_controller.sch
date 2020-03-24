@@ -100,39 +100,39 @@ F 3 "~" H 2600 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9050 3000 9050 3150
+	10000 2900 10000 3050
 $Comp
 L power:GND #PWR09
 U 1 1 5E65F2FA
-P 9050 3150
-F 0 "#PWR09" H 9050 2900 50  0001 C CNN
-F 1 "GND" H 9055 2977 50  0000 C CNN
-F 2 "" H 9050 3150 50  0001 C CNN
-F 3 "" H 9050 3150 50  0001 C CNN
-	1    9050 3150
+P 10000 3050
+F 0 "#PWR09" H 10000 2800 50  0001 C CNN
+F 1 "GND" H 10005 2877 50  0000 C CNN
+F 2 "" H 10000 3050 50  0001 C CNN
+F 3 "" H 10000 3050 50  0001 C CNN
+	1    10000 3050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9650 2000 10150 2000
+	10600 1900 11100 1900
 Wire Wire Line
-	9650 2100 10150 2100
+	10600 2000 11100 2000
 Wire Wire Line
-	9650 2200 10150 2200
-Text Label 9700 2000 0    50   ~ 0
+	10600 2100 11100 2100
+Text Label 10650 1900 0    50   ~ 0
 UART_CLOCK
-Text Label 9850 2100 0    50   ~ 0
+Text Label 10800 2000 0    50   ~ 0
 UART_TX
-Text Label 9850 2200 0    50   ~ 0
+Text Label 10800 2100 0    50   ~ 0
 UART_RX
-Text Label 7950 2200 0    50   ~ 0
+Text Label 8900 2100 0    50   ~ 0
 SPI_SCK
-Text Label 7950 2300 0    50   ~ 0
+Text Label 8900 2200 0    50   ~ 0
 SPI_MOSI
 Wire Wire Line
 	1200 1250 800  1250
 Text Label 800  1250 0    50   ~ 0
 SPI_MOSI
-Text Label 9950 1700 0    50   ~ 0
+Text Label 10900 1600 0    50   ~ 0
 SWIM
 Wire Wire Line
 	1600 6500 1600 6650
@@ -148,24 +148,13 @@ F 3 "" H 1600 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9050 1000 9050 800 
+	10800 850  10600 850 
 Wire Wire Line
 	1300 6200 750  6200
 Text Label 800  6200 0    50   ~ 0
 5V_SUPPLY
-Text Label 9050 950  0    50   ~ 0
+Text Label 10600 850  0    50   ~ 0
 5V_SUPPLY
-$Comp
-L MCU_ST_STM8:STM8S003F3P U3
-U 1 1 5E65DF3F
-P 9050 2000
-F 0 "U3" H 9200 1650 50  0000 C CNN
-F 1 "STM8S003F3P" H 9200 1550 50  0000 C CNN
-F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 9100 3100 50  0001 L CNN
-F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 9000 1600 50  0001 C CNN
-	1    9050 2000
-	1    0    0    -1  
-$EndComp
 $Comp
 L Device:R R2
 U 1 1 5E656C62
@@ -234,14 +223,8 @@ RCH
 Wire Wire Line
 	2350 2700 2850 2700
 Connection ~ 2850 2700
-Text Notes 10250 1700 0    50   ~ 0
-From STM32\n
 Text Notes 2600 800  0    50   ~ 0
 This LCH \nwill drill a hole \nor something for extra function\n
-Text Notes 10400 1900 0    50   ~ 0
-reserved for sensor\n
-Text Notes 7700 1700 2    50   ~ 0
-reserved for sensor\n
 Text Notes 600  3600 0    50   ~ 0
 Output signal 0 to 10V\nto the power supply\n for LED intensity\n\n
 Text Notes 550  2400 0    118  ~ 0
@@ -249,29 +232,29 @@ DAC Amplifier
 Text Notes 750  3700 0    50   ~ 0
 gain is 3x\n
 Wire Wire Line
-	9650 1900 10150 1900
+	10600 1800 11100 1800
 Wire Wire Line
-	9650 1800 10150 1800
+	10600 1700 11100 1700
 Wire Wire Line
-	9650 1700 10150 1700
+	10600 1600 11100 1600
 Wire Wire Line
-	7950 1300 8450 1300
+	8900 1200 9400 1200
 Wire Wire Line
-	7950 1400 8450 1400
+	8900 1300 9400 1300
 Wire Wire Line
-	7950 1500 8450 1500
+	8900 1400 9400 1400
 Wire Wire Line
-	7950 1800 8450 1800
+	8900 1700 9400 1700
 Wire Wire Line
-	7950 1700 8450 1700
+	8900 1600 9400 1600
 Wire Wire Line
-	7950 2400 8450 2400
+	8900 2300 9400 2300
 Wire Wire Line
-	7950 2000 8450 2000
+	8900 1900 9400 1900
 Wire Wire Line
-	7950 2200 8450 2200
+	8900 2100 9400 2100
 Wire Wire Line
-	7950 2300 8450 2300
+	8900 2200 9400 2200
 $Comp
 L Device:R R4
 U 1 1 5E6E69A7
@@ -300,33 +283,33 @@ F 3 "" H 800 5150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1450 4950 1450 4850
-Text Label 7950 1300 0    50   ~ 0
+Text Label 8900 1200 0    50   ~ 0
 PA1
-Text Label 7950 1400 0    50   ~ 0
+Text Label 8900 1300 0    50   ~ 0
 PA2
-Text Label 7950 1500 0    50   ~ 0
+Text Label 8900 1400 0    50   ~ 0
 PA3
-Text Label 7950 1700 0    50   ~ 0
+Text Label 8900 1600 0    50   ~ 0
 C_SENSOR
-Text Label 7950 1800 0    50   ~ 0
+Text Label 8900 1700 0    50   ~ 0
 PB5
-Text Label 7950 2000 0    50   ~ 0
+Text Label 8900 1900 0    50   ~ 0
 WS
-Text Label 7950 2400 0    50   ~ 0
+Text Label 8900 2300 0    50   ~ 0
 PC7
 Wire Wire Line
-	8450 2600 7950 2600
+	9400 2500 8900 2500
 Wire Wire Line
-	8450 2700 7950 2700
+	9400 2600 8900 2600
 Text Notes 550  4200 0    118  ~ 0
 Reset Circuit
-Text Label 7950 2600 0    50   ~ 0
+Text Label 8900 2500 0    50   ~ 0
 RESET
-Text Label 7950 2700 0    50   ~ 0
+Text Label 8900 2600 0    50   ~ 0
 VCAP
-Text Label 9650 1800 0    50   ~ 0
+Text Label 10600 1700 0    50   ~ 0
 TEMP_SENSOR
-Text Label 9800 1900 0    50   ~ 0
+Text Label 10750 1800 0    50   ~ 0
 V_SENSOR
 Wire Wire Line
 	1350 4950 1450 4950
@@ -383,17 +366,6 @@ Wire Wire Line
 Wire Wire Line
 	5400 1500 5400 1950
 $Comp
-L power:GND #PWR0107
-U 1 1 5E771584
-P 5400 2250
-F 0 "#PWR0107" H 5400 2000 50  0001 C CNN
-F 1 "GND" H 5405 2077 50  0000 C CNN
-F 2 "" H 5400 2250 50  0001 C CNN
-F 3 "" H 5400 2250 50  0001 C CNN
-	1    5400 2250
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:R R6
 U 1 1 5E77158A
 P 5400 2100
@@ -419,31 +391,13 @@ F 3 "~" H 5800 1550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5800 1900 5800 1700
-$Comp
-L power:GND #PWR0108
-U 1 1 5E7774A3
-P 5800 1900
-F 0 "#PWR0108" H 5800 1650 50  0001 C CNN
-F 1 "GND" H 5805 1727 50  0000 C CNN
-F 2 "" H 5800 1900 50  0001 C CNN
-F 3 "" H 5800 1900 50  0001 C CNN
-	1    5800 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	5800 1400 5800 1300
 Wire Wire Line
 	5300 1300 5800 1300
-Text Label 4250 1400 0    50   ~ 0
-C_SENSOR
-Wire Wire Line
-	4250 1400 4650 1400
 Wire Wire Line
 	4750 1950 4650 1950
 Wire Wire Line
 	4650 1950 4650 1400
-Connection ~ 4650 1400
 Wire Wire Line
 	4650 1400 4700 1400
 Text Notes 4600 2350 0    50   ~ 0
@@ -454,30 +408,15 @@ Wire Wire Line
 	6100 1300 5800 1300
 Connection ~ 5800 1300
 Wire Wire Line
-	6100 1900 6100 1700
-$Comp
-L power:GND #PWR0109
-U 1 1 5E7B6689
-P 6100 1900
-F 0 "#PWR0109" H 6100 1650 50  0001 C CNN
-F 1 "GND" H 6105 1727 50  0000 C CNN
-F 2 "" H 6100 1900 50  0001 C CNN
-F 3 "" H 6100 1900 50  0001 C CNN
-	1    6100 1900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
 	6100 1300 6600 1300
 Connection ~ 6100 1300
-Text Label 6200 1300 0    50   ~ 0
-CURRENT_IN
 $Comp
 L Device:R R7
 U 1 1 5E7AC3E6
 P 6100 1550
 F 0 "R7" V 6300 1550 50  0000 C CNN
 F 1 "0.01Ω" V 6200 1550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 6030 1550 50  0001 C CNN
+F 2 "Resistor_SMD:R_1210_3225Metric" V 6030 1550 50  0001 C CNN
 F 3 "~" H 6100 1550 50  0001 C CNN
 	1    6100 1550
 	1    0    0    1   
@@ -526,10 +465,10 @@ F 3 "" H 2150 2500 50  0001 C CNN
 	1    2150 2500
 	1    0    0    1   
 $EndComp
-Text Label 7950 2100 0    50   ~ 0
+Text Label 8900 2000 0    50   ~ 0
 PC4
 Wire Wire Line
-	7950 2100 8450 2100
+	8900 2000 9400 2000
 Wire Wire Line
 	3750 7000 3750 7050
 $Comp
@@ -738,23 +677,23 @@ Wire Wire Line
 $Comp
 L Custom_Library:PH2.0_horizontal U10
 U 1 1 5E74E69C
-P 9900 4200
-F 0 "U10" H 10128 4051 50  0000 L CNN
-F 1 "PH2.0_horizontal" H 10128 3960 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 9900 4200 50  0001 C CNN
-F 3 "" H 9900 4200 50  0001 C CNN
-	1    9900 4200
+P 9900 5300
+F 0 "U10" H 10128 5151 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 10128 5060 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 9900 5300 50  0001 C CNN
+F 3 "" H 9900 5300 50  0001 C CNN
+	1    9900 5300
 	1    0    0    -1  
 $EndComp
 $Comp
 L Custom_Library:PH2.0_horizontal U11
 U 1 1 5E74F107
-P 9900 4700
-F 0 "U11" H 10128 4551 50  0000 L CNN
-F 1 "PH2.0_horizontal" H 10128 4460 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 9900 4700 50  0001 C CNN
-F 3 "" H 9900 4700 50  0001 C CNN
-	1    9900 4700
+P 9900 5800
+F 0 "U11" H 10128 5651 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 10128 5560 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 9900 5800 50  0001 C CNN
+F 3 "" H 9900 5800 50  0001 C CNN
+	1    9900 5800
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -765,28 +704,28 @@ Wire Wire Line
 Text Label 6250 6450 0    50   ~ 0
 Tx_Rx
 Wire Wire Line
-	9300 4300 9600 4300
-Text Label 9400 4300 0    50   ~ 0
+	9300 5400 9600 5400
+Text Label 9400 5400 0    50   ~ 0
 Tx_Rx
-Text Label 9300 4950 0    50   ~ 0
+Text Label 9300 6050 0    50   ~ 0
 EXT_GND
 Wire Wire Line
-	9300 4950 9650 4950
+	9300 6050 9650 6050
 Wire Notes Line
 	4400 5350 4400 7400
 Text Notes 2950 5050 0    118  ~ 0
 opto_isolator for UART
 Wire Wire Line
-	9650 4800 9200 4800
-Text Label 9200 4800 0    50   ~ 0
+	9650 5900 9200 5900
+Text Label 9200 5900 0    50   ~ 0
 5V_EXT
-Text Notes 9200 3500 0    118  ~ 0
+Text Notes 9200 4600 0    118  ~ 0
 Connection to STM32
 Text Notes 450  650  0    118  ~ 0
 External DAC
 Text Notes 500  5750 0    118  ~ 0
 Low drop-out regulator
-Text Notes 7000 850  0    118  ~ 0
+Text Notes 9150 650  0    118  ~ 0
 Microcontroller STM8
 Wire Wire Line
 	4700 5900 5500 5900
@@ -829,72 +768,72 @@ F 3 "~" H 5100 6750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9650 4450 9600 4450
+	9650 5550 9600 5550
 Wire Wire Line
-	9600 4450 9600 4300
-Connection ~ 9600 4300
+	9600 5550 9600 5400
+Connection ~ 9600 5400
 Wire Wire Line
-	9600 4300 9650 4300
+	9600 5400 9650 5400
 Wire Wire Line
-	9550 3850 9550 4000
+	9550 4950 9550 5100
 $Comp
 L power:GND #PWR02
 U 1 1 5E76470F
-P 9550 4000
-F 0 "#PWR02" H 9550 3750 50  0001 C CNN
-F 1 "GND" H 9555 3827 50  0000 C CNN
-F 2 "" H 9550 4000 50  0001 C CNN
-F 3 "" H 9550 4000 50  0001 C CNN
-	1    9550 4000
+P 9550 5100
+F 0 "#PWR02" H 9550 4850 50  0001 C CNN
+F 1 "GND" H 9555 4927 50  0000 C CNN
+F 2 "" H 9550 5100 50  0001 C CNN
+F 3 "" H 9550 5100 50  0001 C CNN
+	1    9550 5100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9650 3850 9550 3850
+	9650 4950 9550 4950
 Wire Wire Line
 	1900 6200 2150 6200
 Text Label 2150 6200 0    50   ~ 0
 12V_INPUT
 Wire Wire Line
-	9650 3700 9200 3700
-Text Label 9200 3700 0    50   ~ 0
+	9650 4800 9200 4800
+Text Label 9200 4800 0    50   ~ 0
 12V_INPUT
 Wire Wire Line
 	2150 3100 2150 3200
 Text Label 2150 3200 0    50   ~ 0
 12V_INPUT
-Text Notes 4050 2800 0    118  ~ 0
+Text Notes 6750 4600 0    118  ~ 0
 Temperature sensor
 Wire Wire Line
-	5700 3100 5150 3100
-Text Label 5200 3100 0    50   ~ 0
+	8400 4900 7850 4900
+Text Label 7900 4900 0    50   ~ 0
 5V_SUPPLY
 $Comp
 L Device:R R12
 U 1 1 5E778979
-P 5150 3350
-F 0 "R12" V 4943 3350 50  0000 C CNN
-F 1 "R" V 5034 3350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 5080 3350 50  0001 C CNN
-F 3 "~" H 5150 3350 50  0001 C CNN
-	1    5150 3350
+P 7850 5150
+F 0 "R12" V 7643 5150 50  0000 C CNN
+F 1 "R" V 7734 5150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7780 5150 50  0001 C CNN
+F 3 "~" H 7850 5150 50  0001 C CNN
+	1    7850 5150
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 3100 5150 3200
+	7850 4900 7850 5000
 $Comp
 L power:GND #PWR01
 U 1 1 5E784F52
-P 5150 4200
-F 0 "#PWR01" H 5150 3950 50  0001 C CNN
-F 1 "GND" H 5155 4027 50  0000 C CNN
-F 2 "" H 5150 4200 50  0001 C CNN
-F 3 "" H 5150 4200 50  0001 C CNN
-	1    5150 4200
+P 7850 6000
+F 0 "#PWR01" H 7850 5750 50  0001 C CNN
+F 1 "GND" H 7855 5827 50  0000 C CNN
+F 2 "" H 7850 6000 50  0001 C CNN
+F 3 "" H 7850 6000 50  0001 C CNN
+	1    7850 6000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 3650 5650 3650
-Text Label 5150 3650 0    50   ~ 0
+	7850 5450 8350 5450
+Text Label 7850 5450 0    50   ~ 0
 TEMP_SENSOR
 $Comp
 L Amplifier_Operational:LM358 U1
@@ -910,34 +849,34 @@ $EndComp
 $Comp
 L Custom_Library:PH2.0_horizontal U9
 U 1 1 5E74D8D5
-P 9900 3600
-F 0 "U9" H 10128 3451 50  0000 L CNN
-F 1 "PH2.0_horizontal" H 10128 3360 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 9900 3600 50  0001 C CNN
-F 3 "" H 9900 3600 50  0001 C CNN
-	1    9900 3600
+P 9900 4700
+F 0 "U9" H 10128 4551 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 10128 4460 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 9900 4700 50  0001 C CNN
+F 3 "" H 9900 4700 50  0001 C CNN
+	1    9900 4700
 	1    0    0    -1  
 $EndComp
 $Comp
 L Custom_Library:PH2.0_horizontal U12
 U 1 1 5E79BBBF
-P 5550 3800
-F 0 "U12" H 5778 3651 50  0000 L CNN
-F 1 "PH2.0_horizontal" H 5778 3560 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 5550 3800 50  0001 C CNN
-F 3 "" H 5550 3800 50  0001 C CNN
-	1    5550 3800
+P 8250 5600
+F 0 "U12" H 8478 5451 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 8478 5360 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 8250 5600 50  0001 C CNN
+F 3 "" H 8250 5600 50  0001 C CNN
+	1    8250 5600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5150 3900 5300 3900
+	7850 5700 8000 5700
 Wire Wire Line
-	5150 3500 5150 3900
+	7850 5300 7850 5450
 Wire Wire Line
-	5300 4050 5150 4050
+	8000 5850 7850 5850
 Wire Wire Line
-	5150 4050 5150 4200
-Text Notes 5400 3800 0    50   ~ 0
+	7850 5850 7850 6000
+Text Notes 8100 5600 0    50   ~ 0
 to Thermistor
 $Comp
 L Regulator_Linear:AMS1117-5.0 U6
@@ -950,4 +889,262 @@ F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1700 5950 50  0001 C C
 	1    1600 6200
 	-1   0    0    -1  
 $EndComp
+Connection ~ 7850 5450
+Wire Wire Line
+	7850 5450 7850 5700
+$Comp
+L Custom_Library:SMD2063 U?
+U 1 1 5E8C06BF
+P 10350 4450
+F 0 "U?" H 10350 3700 50  0000 R CNN
+F 1 "SMD2063" H 10500 3800 50  0000 R CNN
+F 2 "" H 10350 4450 50  0001 C CNN
+F 3 "" H 10350 4450 50  0001 C CNN
+	1    10350 4450
+	-1   0    0    1   
+$EndComp
+Text Label 9600 3950 0    50   ~ 0
+LED-
+Text Label 9600 4250 0    50   ~ 0
+LED+
+Text Label 9600 4100 0    50   ~ 0
+LED_SENSE
+Wire Wire Line
+	9600 4100 10000 4100
+Wire Wire Line
+	9600 4250 10000 4250
+Wire Wire Line
+	9600 3950 10000 3950
+Wire Wire Line
+	6100 1700 6100 2000
+Text Label 6100 2000 1    50   ~ 0
+LED-
+Text Label 6200 1300 0    50   ~ 0
+LED_SENSE
+Text Notes 8350 3600 0    118  ~ 0
+Voltage and current for sensor
+$Comp
+L Device:R R?
+U 1 1 5E8FADD1
+P 4750 3200
+F 0 "R?" V 4543 3200 50  0000 C CNN
+F 1 "R" V 4634 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 3200 50  0001 C CNN
+F 3 "~" H 4750 3200 50  0001 C CNN
+	1    4750 3200
+	1    0    0    -1  
+$EndComp
+Text Notes 4450 2800 0    118  ~ 0
+Voltage Sensor
+Text Label 4750 3050 0    50   ~ 0
+LED+
+Wire Wire Line
+	4750 3050 5150 3050
+$Comp
+L Device:R R?
+U 1 1 5E90AFB8
+P 4750 3900
+F 0 "R?" V 4543 3900 50  0000 C CNN
+F 1 "R" V 4634 3900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 3900 50  0001 C CNN
+F 3 "~" H 4750 3900 50  0001 C CNN
+	1    4750 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 3500 5250 3500
+Text Label 4900 3500 0    50   ~ 0
+V_SENSOR
+Wire Wire Line
+	4750 3350 4750 3500
+Connection ~ 4750 3500
+Wire Wire Line
+	4750 3500 4750 3750
+Text Label 4750 4450 1    50   ~ 0
+LED-
+Wire Wire Line
+	4750 4450 4750 4050
+Text Notes 5250 3050 0    50   ~ 0
+max 80V
+Text Notes 9200 4250 0    50   ~ 0
+max 80V
+Text Notes 5300 3500 0    50   ~ 0
+(0 to 5V)\n
+$Comp
+L Device:D_Zener D?
+U 1 1 5E929C56
+P 4400 3900
+F 0 "D?" V 4350 3700 50  0000 L CNN
+F 1 "D_Zener" V 4450 3500 50  0000 L CNN
+F 2 "" H 4400 3900 50  0001 C CNN
+F 3 "~" H 4400 3900 50  0001 C CNN
+	1    4400 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4400 4050 4750 4050
+Connection ~ 4750 4050
+Wire Wire Line
+	4750 3500 4400 3500
+Wire Wire Line
+	4400 3500 4400 3750
+Wire Wire Line
+	5800 1700 5800 2000
+Text Label 5800 2000 1    50   ~ 0
+LED-
+Wire Wire Line
+	5400 2250 5700 2250
+Text Label 5700 2250 2    50   ~ 0
+LED-
+$Comp
+L Device:D_Zener D?
+U 1 1 5E95453B
+P 4250 1550
+F 0 "D?" V 4200 1350 50  0000 L CNN
+F 1 "D_Zener" V 4300 1150 50  0000 L CNN
+F 2 "" H 4250 1550 50  0001 C CNN
+F 3 "~" H 4250 1550 50  0001 C CNN
+	1    4250 1550
+	0    1    1    0   
+$EndComp
+Text Label 3700 1400 0    50   ~ 0
+C_SENSOR
+Connection ~ 4650 1400
+Wire Wire Line
+	3700 1400 4250 1400
+Connection ~ 4250 1400
+Wire Wire Line
+	4250 1400 4650 1400
+Wire Wire Line
+	4250 1700 4250 2000
+Text Label 4250 2000 1    50   ~ 0
+LED-
+$Comp
+L Custom_Library:PinSocket_1x4 U?
+U 1 1 5E9927B0
+P 7600 4500
+F 0 "U?" H 7800 3550 50  0000 R CNN
+F 1 "PinSocket_1x4" H 7800 3650 50  0000 R CNN
+F 2 "" H 7600 4500 50  0001 C CNN
+F 3 "" H 7600 4500 50  0001 C CNN
+	1    7600 4500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7300 4100 6900 4100
+Wire Wire Line
+	7300 3800 6900 3800
+Text Label 6900 4100 0    50   ~ 0
+SWIM
+Text Label 6900 3800 0    50   ~ 0
+RESET
+$Comp
+L Jumper:SolderJumper_2_Open JP?
+U 1 1 5E9DBABF
+P 7750 2200
+F 0 "JP?" H 7750 2405 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 7750 2314 50  0000 C CNN
+F 2 "" H 7750 2200 50  0001 C CNN
+F 3 "~" H 7750 2200 50  0001 C CNN
+	1    7750 2200
+	1    0    0    -1  
+$EndComp
+Text Label 7200 2200 0    50   ~ 0
+LED-
+Wire Wire Line
+	7200 2200 7600 2200
+$Comp
+L power:GND #PWR?
+U 1 1 5E9FD433
+P 6950 3950
+F 0 "#PWR?" H 6950 3700 50  0001 C CNN
+F 1 "GND" H 6955 3777 50  0000 C CNN
+F 2 "" H 6950 3950 50  0001 C CNN
+F 3 "" H 6950 3950 50  0001 C CNN
+	1    6950 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6950 3950 7300 3950
+Text Label 7300 4250 2    50   ~ 0
+5V_SUPPLY
+Wire Wire Line
+	6900 4250 7300 4250
+$Comp
+L Device:C C?
+U 1 1 5EA22692
+P 10600 1000
+F 0 "C?" H 10715 1046 50  0000 L CNN
+F 1 "C" H 10715 955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10638 850 50  0001 C CNN
+F 3 "~" H 10600 1000 50  0001 C CNN
+	1    10600 1000
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_ST_STM8:STM8S003F3P U3
+U 1 1 5E65DF3F
+P 10000 1900
+F 0 "U3" H 10150 1550 50  0000 C CNN
+F 1 "STM8S003F3P" H 10150 1450 50  0000 C CNN
+F 2 "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" H 10050 3000 50  0001 L CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00024550.pdf" H 9950 1500 50  0001 C CNN
+	1    10000 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 850  10000 850 
+Wire Wire Line
+	10000 850  10000 900 
+Connection ~ 10600 850 
+$Comp
+L Device:C C?
+U 1 1 5EA39C76
+P 4050 5750
+F 0 "C?" V 4200 5850 50  0000 C CNN
+F 1 "C" V 4200 5750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4088 5600 50  0001 C CNN
+F 3 "~" H 4050 5750 50  0001 C CNN
+	1    4050 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EA3F7D4
+P 3950 5600
+F 0 "#PWR?" H 3950 5350 50  0001 C CNN
+F 1 "GND" H 3955 5427 50  0000 C CNN
+F 2 "" H 3950 5600 50  0001 C CNN
+F 3 "" H 3950 5600 50  0001 C CNN
+	1    3950 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 5600 4050 5600
+Wire Wire Line
+	2000 6350 2000 6200
+$Comp
+L Device:C C?
+U 1 1 5EA4B159
+P 2000 6500
+F 0 "C?" V 2150 6600 50  0000 C CNN
+F 1 "C" V 2150 6500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2038 6350 50  0001 C CNN
+F 3 "~" H 2000 6500 50  0001 C CNN
+	1    2000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EA50995
+P 2000 6750
+F 0 "#PWR?" H 2000 6500 50  0001 C CNN
+F 1 "GND" H 2005 6577 50  0000 C CNN
+F 2 "" H 2000 6750 50  0001 C CNN
+F 3 "" H 2000 6750 50  0001 C CNN
+	1    2000 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6650 2000 6750
 $EndSCHEMATC
