@@ -1,4 +1,4 @@
-17670441052024834
+17673612242948500
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -44225,6 +44225,20 @@ LEDSMD2062
 0
 4
 2
+Custom_footprint_lib
+SMD2063
+
+
+0
+6
+3
+Custom_footprint_lib
+custom_pinsocket_1x04_p2.54
+
+
+0
+8
+4
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator

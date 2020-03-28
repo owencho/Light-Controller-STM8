@@ -113,13 +113,9 @@ F 3 "" H 10000 3050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10600 1900 11100 1900
-Wire Wire Line
 	10600 2000 11100 2000
 Wire Wire Line
 	10600 2100 11100 2100
-Text Label 10650 1900 0    50   ~ 0
-UART_CLOCK
 Text Label 10800 2000 0    50   ~ 0
 UART_TX
 Text Label 10800 2100 0    50   ~ 0
@@ -148,12 +144,12 @@ F 3 "" H 1600 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	10000 900  10000 700 
+	10800 850  10600 850 
 Wire Wire Line
 	1300 6200 750  6200
 Text Label 800  6200 0    50   ~ 0
 5V_SUPPLY
-Text Label 10000 750  0    50   ~ 0
+Text Label 10600 850  0    50   ~ 0
 5V_SUPPLY
 $Comp
 L Device:R R2
@@ -234,23 +230,9 @@ gain is 3x\n
 Wire Wire Line
 	10600 1800 11100 1800
 Wire Wire Line
-	10600 1700 11100 1700
-Wire Wire Line
 	10600 1600 11100 1600
 Wire Wire Line
-	8900 1200 9400 1200
-Wire Wire Line
-	8900 1300 9400 1300
-Wire Wire Line
-	8900 1400 9400 1400
-Wire Wire Line
-	8900 1700 9400 1700
-Wire Wire Line
 	8900 1600 9400 1600
-Wire Wire Line
-	8900 2300 9400 2300
-Wire Wire Line
-	8900 1900 9400 1900
 Wire Wire Line
 	8900 2100 9400 2100
 Wire Wire Line
@@ -283,32 +265,14 @@ F 3 "" H 800 5150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1450 4950 1450 4850
-Text Label 8900 1200 0    50   ~ 0
-PA1
-Text Label 8900 1300 0    50   ~ 0
-PA2
-Text Label 8900 1400 0    50   ~ 0
-PA3
 Text Label 8900 1600 0    50   ~ 0
 C_SENSOR
-Text Label 8900 1700 0    50   ~ 0
-PB5
-Text Label 8900 1900 0    50   ~ 0
-WS
-Text Label 8900 2300 0    50   ~ 0
-PC7
 Wire Wire Line
 	9400 2500 8900 2500
-Wire Wire Line
-	9400 2600 8900 2600
 Text Notes 550  4200 0    118  ~ 0
 Reset Circuit
 Text Label 8900 2500 0    50   ~ 0
 RESET
-Text Label 8900 2600 0    50   ~ 0
-VCAP
-Text Label 10600 1700 0    50   ~ 0
-TEMP_SENSOR
 Text Label 10750 1800 0    50   ~ 0
 V_SENSOR
 Wire Wire Line
@@ -465,10 +429,6 @@ F 3 "" H 2150 2500 50  0001 C CNN
 	1    2150 2500
 	1    0    0    1   
 $EndComp
-Text Label 8900 2000 0    50   ~ 0
-PC4
-Wire Wire Line
-	8900 2000 9400 2000
 Wire Wire Line
 	3750 7000 3750 7050
 $Comp
@@ -790,8 +750,8 @@ $EndComp
 Wire Wire Line
 	9650 4950 9550 4950
 Wire Wire Line
-	1900 6200 2150 6200
-Text Label 2150 6200 0    50   ~ 0
+	1900 6200 2000 6200
+Text Label 2000 6200 0    50   ~ 0
 12V_INPUT
 Wire Wire Line
 	9650 4800 9200 4800
@@ -893,12 +853,12 @@ Connection ~ 7850 5450
 Wire Wire Line
 	7850 5450 7850 5700
 $Comp
-L Custom_Library:SMD2063 U?
+L Custom_Library:SMD2063 U14
 U 1 1 5E8C06BF
 P 10350 4450
-F 0 "U?" H 10350 3700 50  0000 R CNN
+F 0 "U14" H 10350 3700 50  0000 R CNN
 F 1 "SMD2063" H 10500 3800 50  0000 R CNN
-F 2 "" H 10350 4450 50  0001 C CNN
+F 2 "Custom_footprint_lib:SMD2063" H 10350 4450 50  0001 C CNN
 F 3 "" H 10350 4450 50  0001 C CNN
 	1    10350 4450
 	-1   0    0    1   
@@ -924,10 +884,10 @@ LED_SENSE
 Text Notes 8350 3600 0    118  ~ 0
 Voltage and current for sensor
 $Comp
-L Device:R R?
+L Device:R R13
 U 1 1 5E8FADD1
 P 4750 3200
-F 0 "R?" V 4543 3200 50  0000 C CNN
+F 0 "R13" V 4543 3200 50  0000 C CNN
 F 1 "R" V 4634 3200 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 3200 50  0001 C CNN
 F 3 "~" H 4750 3200 50  0001 C CNN
@@ -941,10 +901,10 @@ LED+
 Wire Wire Line
 	4750 3050 5150 3050
 $Comp
-L Device:R R?
+L Device:R R14
 U 1 1 5E90AFB8
 P 4750 3900
-F 0 "R?" V 4543 3900 50  0000 C CNN
+F 0 "R14" V 4543 3900 50  0000 C CNN
 F 1 "R" V 4634 3900 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 3900 50  0001 C CNN
 F 3 "~" H 4750 3900 50  0001 C CNN
@@ -970,17 +930,6 @@ Text Notes 9200 4250 0    50   ~ 0
 max 80V
 Text Notes 5300 3500 0    50   ~ 0
 (0 to 5V)\n
-$Comp
-L Device:D_Zener D?
-U 1 1 5E929C56
-P 4400 3900
-F 0 "D?" V 4350 3700 50  0000 L CNN
-F 1 "D_Zener" V 4450 3500 50  0000 L CNN
-F 2 "" H 4400 3900 50  0001 C CNN
-F 3 "~" H 4400 3900 50  0001 C CNN
-	1    4400 3900
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	4400 4050 4750 4050
 Connection ~ 4750 4050
@@ -996,64 +945,60 @@ Wire Wire Line
 	5400 2250 5700 2250
 Text Label 5700 2250 2    50   ~ 0
 LED-
-$Comp
-L Device:D_Zener D?
-U 1 1 5E95453B
-P 4250 1550
-F 0 "D?" V 4200 1350 50  0000 L CNN
-F 1 "D_Zener" V 4300 1150 50  0000 L CNN
-F 2 "" H 4250 1550 50  0001 C CNN
-F 3 "~" H 4250 1550 50  0001 C CNN
-	1    4250 1550
-	0    1    1    0   
-$EndComp
 Text Label 3700 1400 0    50   ~ 0
 C_SENSOR
 Connection ~ 4650 1400
-Wire Wire Line
-	3700 1400 4250 1400
-Connection ~ 4250 1400
-Wire Wire Line
-	4250 1400 4650 1400
 Wire Wire Line
 	4250 1700 4250 2000
 Text Label 4250 2000 1    50   ~ 0
 LED-
 $Comp
-L Custom_Library:PinSocket_1x4 U?
+L Custom_Library:PinSocket_1x4 U13
 U 1 1 5E9927B0
-P 7900 2250
-F 0 "U?" H 7582 1729 50  0000 R CNN
-F 1 "PinSocket_1x4" H 7582 1820 50  0000 R CNN
-F 2 "" H 7900 2250 50  0001 C CNN
-F 3 "" H 7900 2250 50  0001 C CNN
-	1    7900 2250
+P 7600 4500
+F 0 "U13" H 7800 3550 50  0000 R CNN
+F 1 "PinSocket_1x4" H 7800 3650 50  0000 R CNN
+F 2 "Custom_footprint_lib:custom_pinsocket_1x04_p2.54" H 7600 4500 50  0001 C CNN
+F 3 "" H 7600 4500 50  0001 C CNN
+	1    7600 4500
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7600 2000 7200 2000
+	7300 4100 6900 4100
 Wire Wire Line
-	7600 1850 7200 1850
-Wire Wire Line
-	7600 1700 7200 1700
-Wire Wire Line
-	7600 1550 7200 1550
-Text Label 7200 2000 0    50   ~ 0
-+5V
-Text Label 7200 1850 0    50   ~ 0
+	7300 3800 6900 3800
+Text Label 6900 4100 0    50   ~ 0
 SWIM
-Text Label 7200 1700 0    50   ~ 0
-GND
-Text Label 7200 1550 0    50   ~ 0
+Text Label 6900 3800 0    50   ~ 0
 RESET
+$Comp
+L power:GND #PWR0103
+U 1 1 5E9FD433
+P 6950 3950
+F 0 "#PWR0103" H 6950 3700 50  0001 C CNN
+F 1 "GND" H 6955 3777 50  0000 C CNN
+F 2 "" H 6950 3950 50  0001 C CNN
+F 3 "" H 6950 3950 50  0001 C CNN
+	1    6950 3950
+	0    1    1    0   
+$EndComp
 Wire Wire Line
-	10400 850  10000 850 
-Text Label 10000 850  0    50   ~ 0
-+5V
-Text Label 10000 2950 0    50   ~ 0
-GND
+	6950 3950 7300 3950
+Text Label 7300 4250 2    50   ~ 0
+5V_SUPPLY
 Wire Wire Line
-	10400 2950 10000 2950
+	6900 4250 7300 4250
+$Comp
+L Device:C C10
+U 1 1 5EA22692
+P 10600 1000
+F 0 "C10" H 10715 1046 50  0000 L CNN
+F 1 "C" H 10715 955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 10638 850 50  0001 C CNN
+F 3 "~" H 10600 1000 50  0001 C CNN
+	1    10600 1000
+	1    0    0    -1  
+$EndComp
 $Comp
 L MCU_ST_STM8:STM8S003F3P U3
 U 1 1 5E65DF3F
@@ -1065,4 +1010,138 @@ F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/da
 	1    10000 1900
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	10600 850  10000 850 
+Wire Wire Line
+	10000 850  10000 900 
+Connection ~ 10600 850 
+$Comp
+L Device:C C9
+U 1 1 5EA39C76
+P 4050 5750
+F 0 "C9" V 4200 5850 50  0000 C CNN
+F 1 "C" V 4200 5750 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4088 5600 50  0001 C CNN
+F 3 "~" H 4050 5750 50  0001 C CNN
+	1    4050 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5EA3F7D4
+P 3950 5600
+F 0 "#PWR0104" H 3950 5350 50  0001 C CNN
+F 1 "GND" H 3955 5427 50  0000 C CNN
+F 2 "" H 3950 5600 50  0001 C CNN
+F 3 "" H 3950 5600 50  0001 C CNN
+	1    3950 5600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3950 5600 4050 5600
+Wire Wire Line
+	2000 6350 2000 6200
+$Comp
+L Device:C C8
+U 1 1 5EA4B159
+P 2000 6500
+F 0 "C8" V 2150 6600 50  0000 C CNN
+F 1 "C" V 2150 6500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2038 6350 50  0001 C CNN
+F 3 "~" H 2000 6500 50  0001 C CNN
+	1    2000 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5EA50995
+P 2000 6750
+F 0 "#PWR0107" H 2000 6500 50  0001 C CNN
+F 1 "GND" H 2005 6577 50  0000 C CNN
+F 2 "" H 2000 6750 50  0001 C CNN
+F 3 "" H 2000 6750 50  0001 C CNN
+	1    2000 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6650 2000 6750
+Wire Wire Line
+	8900 1700 9400 1700
+Text Label 8900 1700 0    50   ~ 0
+TEMP_SENSOR
+Text Label 8900 1900 0    50   ~ 0
+WS
+Wire Wire Line
+	8900 1900 9400 1900
+$Comp
+L Diode:BZX84Cxx D2
+U 1 1 5E80DF83
+P 4250 1550
+F 0 "D2" V 4204 1629 50  0000 L CNN
+F 1 "BZX84Cxx" V 4295 1629 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 4250 1375 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 4250 1550 50  0001 C CNN
+	1    4250 1550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3700 1400 4250 1400
+Connection ~ 4250 1400
+Wire Wire Line
+	4250 1400 4650 1400
+$Comp
+L Diode:BZX84Cxx D3
+U 1 1 5E8143F1
+P 4400 3900
+F 0 "D3" V 4350 3600 50  0000 L CNN
+F 1 "BZX84Cxx" V 4450 3450 50  0000 L CNN
+F 2 "Diode_SMD:D_SOT-23_ANK" H 4400 3725 50  0001 C CNN
+F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 4400 3900 50  0001 C CNN
+	1    4400 3900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7700 3350 7800 3350
+$Comp
+L power:GND #PWR0108
+U 1 1 5E7CE938
+P 7800 3350
+F 0 "#PWR0108" H 7800 3100 50  0001 C CNN
+F 1 "GND" H 7805 3177 50  0000 C CNN
+F 2 "" H 7800 3350 50  0001 C CNN
+F 3 "" H 7800 3350 50  0001 C CNN
+	1    7800 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7000 3350 7400 3350
+Text Label 7000 3350 0    50   ~ 0
+LED-
+$Comp
+L Jumper:SolderJumper_2_Open JP1
+U 1 1 5E9DBABF
+P 7550 3350
+F 0 "JP1" H 7550 3555 50  0000 C CNN
+F 1 "SolderJumper_2_Open" H 7550 3464 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7550 3350 50  0001 C CNN
+F 3 "~" H 7550 3350 50  0001 C CNN
+	1    7550 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0109
+U 1 1 5E834D03
+P 10600 1200
+F 0 "#PWR0109" H 10600 950 50  0001 C CNN
+F 1 "GND" H 10605 1027 50  0000 C CNN
+F 2 "" H 10600 1200 50  0001 C CNN
+F 3 "" H 10600 1200 50  0001 C CNN
+	1    10600 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10600 1150 10600 1200
+Connection ~ 2000 6200
+Wire Wire Line
+	2000 6200 2150 6200
 $EndSCHEMATC
