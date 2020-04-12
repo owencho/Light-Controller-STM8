@@ -558,7 +558,7 @@ Wire Wire Line
 	5050 7000 6150 7000
 Wire Wire Line
 	6150 5900 6150 6450
-Text Label 3600 5900 0    50   ~ 0
+Text Label 4050 5900 2    50   ~ 0
 5V_SUPPLY
 $Comp
 L Custom_Library:EL357N-C U8
@@ -572,7 +572,7 @@ F 3 "" H 4400 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3600 5900 4100 5900
+	3600 5900 4050 5900
 $Comp
 L Custom_Library:EL357N-C U7
 U 1 1 5E795D5E
@@ -863,18 +863,18 @@ F 3 "" H 10350 4450 50  0001 C CNN
 	1    10350 4450
 	-1   0    0    1   
 $EndComp
-Text Label 9600 3950 0    50   ~ 0
-LED-
 Text Label 9600 4250 0    50   ~ 0
+LED-
+Text Label 9600 3950 0    50   ~ 0
 LED+
 Text Label 9600 4100 0    50   ~ 0
 LED_SENSE
 Wire Wire Line
 	9600 4100 10000 4100
 Wire Wire Line
-	9600 4250 10000 4250
-Wire Wire Line
 	9600 3950 10000 3950
+Wire Wire Line
+	9600 4250 10000 4250
 Wire Wire Line
 	6100 1700 6100 2000
 Text Label 6100 2000 1    50   ~ 0
@@ -926,7 +926,7 @@ Wire Wire Line
 	4750 4450 4750 4050
 Text Notes 5250 3050 0    50   ~ 0
 max 80V
-Text Notes 9200 4250 0    50   ~ 0
+Text Notes 9200 3950 0    50   ~ 0
 max 80V
 Text Notes 5300 3500 0    50   ~ 0
 (0 to 5V)\n
@@ -1100,8 +1100,6 @@ F 3 "https://diotec.com/tl_files/diotec/files/pdf/datasheets/bzx84c2v4.pdf" H 44
 	1    4400 3900
 	0    1    1    0   
 $EndComp
-Wire Wire Line
-	7700 3350 7800 3350
 $Comp
 L power:GND #PWR0108
 U 1 1 5E7CE938
@@ -1114,20 +1112,9 @@ F 3 "" H 7800 3350 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	7000 3350 7400 3350
+	7000 3350 7350 3350
 Text Label 7000 3350 0    50   ~ 0
 LED-
-$Comp
-L Jumper:SolderJumper_2_Open JP1
-U 1 1 5E9DBABF
-P 7550 3350
-F 0 "JP1" H 7550 3555 50  0000 C CNN
-F 1 "SolderJumper_2_Open" H 7550 3464 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7550 3350 50  0001 C CNN
-F 3 "~" H 7550 3350 50  0001 C CNN
-	1    7550 3350
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:GND #PWR0109
 U 1 1 5E834D03
@@ -1144,4 +1131,20 @@ Wire Wire Line
 Connection ~ 2000 6200
 Wire Wire Line
 	2000 6200 2150 6200
+Connection ~ 4050 5900
+Wire Wire Line
+	4050 5900 4100 5900
+Wire Wire Line
+	7750 3350 7800 3350
+$Comp
+L Jumper:Jumper_2_Open JP?
+U 1 1 5E84B2E4
+P 7550 3350
+F 0 "JP?" H 7550 3585 50  0000 C CNN
+F 1 "Jumper_2_Open" H 7550 3494 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7550 3350 50  0001 C CNN
+F 3 "~" H 7550 3350 50  0001 C CNN
+	1    7550 3350
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
