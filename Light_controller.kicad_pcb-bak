@@ -1558,7 +1558,7 @@
     (tags "CMS SOT")
     (path /5E7C43A9)
     (attr smd)
-    (fp_text reference U6 (at -1.29 4.21) (layer F.SilkS)
+    (fp_text reference U6 (at 3.35 2.95) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value AMS1117-5.0 (at 0 4.5) (layer F.Fab)
