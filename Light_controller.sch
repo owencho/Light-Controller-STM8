@@ -761,39 +761,39 @@ Wire Wire Line
 	2150 3100 2150 3200
 Text Label 2150 3200 0    50   ~ 0
 12V_INPUT
-Text Notes 6750 4600 0    118  ~ 0
+Text Notes 6150 4500 0    118  ~ 0
 Temperature sensor
 Wire Wire Line
-	8400 4900 7850 4900
-Text Label 7900 4900 0    50   ~ 0
+	7800 4800 7250 4800
+Text Label 7300 4800 0    50   ~ 0
 5V_SUPPLY
 $Comp
 L Device:R R12
 U 1 1 5E778979
-P 7850 5150
-F 0 "R12" V 7643 5150 50  0000 C CNN
-F 1 "R" V 7734 5150 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 7780 5150 50  0001 C CNN
-F 3 "~" H 7850 5150 50  0001 C CNN
-	1    7850 5150
+P 7250 5050
+F 0 "R12" V 7043 5050 50  0000 C CNN
+F 1 "R" V 7134 5050 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 5050 50  0001 C CNN
+F 3 "~" H 7250 5050 50  0001 C CNN
+	1    7250 5050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 4900 7850 5000
+	7250 4800 7250 4900
 $Comp
 L power:GND #PWR01
 U 1 1 5E784F52
-P 7850 6000
-F 0 "#PWR01" H 7850 5750 50  0001 C CNN
-F 1 "GND" H 7855 5827 50  0000 C CNN
-F 2 "" H 7850 6000 50  0001 C CNN
-F 3 "" H 7850 6000 50  0001 C CNN
-	1    7850 6000
+P 7250 5900
+F 0 "#PWR01" H 7250 5650 50  0001 C CNN
+F 1 "GND" H 7255 5727 50  0000 C CNN
+F 2 "" H 7250 5900 50  0001 C CNN
+F 3 "" H 7250 5900 50  0001 C CNN
+	1    7250 5900
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 5450 8350 5450
-Text Label 7850 5450 0    50   ~ 0
+	7250 5350 7750 5350
+Text Label 7250 5350 0    50   ~ 0
 TEMP_SENSOR
 $Comp
 L Amplifier_Operational:LM358 U1
@@ -820,23 +820,23 @@ $EndComp
 $Comp
 L Custom_Library:PH2.0_horizontal U12
 U 1 1 5E79BBBF
-P 8250 5600
-F 0 "U12" H 8478 5451 50  0000 L CNN
-F 1 "PH2.0_horizontal" H 8478 5360 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 8250 5600 50  0001 C CNN
-F 3 "" H 8250 5600 50  0001 C CNN
-	1    8250 5600
+P 7650 5500
+F 0 "U12" H 7878 5351 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 7878 5260 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 7650 5500 50  0001 C CNN
+F 3 "" H 7650 5500 50  0001 C CNN
+	1    7650 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7850 5700 8000 5700
+	7250 5600 7400 5600
 Wire Wire Line
-	7850 5300 7850 5450
+	7250 5200 7250 5350
 Wire Wire Line
-	8000 5850 7850 5850
+	7400 5750 7250 5750
 Wire Wire Line
-	7850 5850 7850 6000
-Text Notes 8100 5600 0    50   ~ 0
+	7250 5750 7250 5900
+Text Notes 7500 5500 0    50   ~ 0
 to Thermistor
 $Comp
 L Regulator_Linear:AMS1117-5.0 U6
@@ -849,51 +849,21 @@ F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 1700 5950 50  0001 C C
 	1    1600 6200
 	-1   0    0    -1  
 $EndComp
-Connection ~ 7850 5450
+Connection ~ 7250 5350
 Wire Wire Line
-	7850 5450 7850 5700
-$Comp
-L Custom_Library:SMD2063 U14
-U 1 1 5E8C06BF
-P 10350 4450
-F 0 "U14" H 10350 3700 50  0000 R CNN
-F 1 "SMD2063" H 10500 3800 50  0000 R CNN
-F 2 "Custom_footprint_lib:SMD2063" H 10350 4450 50  0001 C CNN
-F 3 "" H 10350 4450 50  0001 C CNN
-	1    10350 4450
-	-1   0    0    1   
-$EndComp
-Text Label 9600 4250 0    50   ~ 0
+	7250 5350 7250 5600
+Text Label 9600 4150 0    50   ~ 0
 LED-
-Text Label 9600 3950 0    50   ~ 0
+Text Label 9600 4000 0    50   ~ 0
 LED+
-Text Label 9600 4100 0    50   ~ 0
-LED_SENSE
 Wire Wire Line
-	9600 4100 10000 4100
+	9600 4000 10000 4000
 Wire Wire Line
-	9600 3950 10000 3950
-Wire Wire Line
-	9600 4250 10000 4250
-Wire Wire Line
-	6100 1700 6100 2000
-Text Label 6100 2000 1    50   ~ 0
-LED-
+	9600 4150 10000 4150
 Text Label 6200 1300 0    50   ~ 0
-LED_SENSE
+LED+
 Text Notes 8350 3600 0    118  ~ 0
 Voltage and current for sensor
-$Comp
-L Device:R R13
-U 1 1 5E8FADD1
-P 4750 3200
-F 0 "R13" V 4543 3200 50  0000 C CNN
-F 1 "R" V 4634 3200 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 3200 50  0001 C CNN
-F 3 "~" H 4750 3200 50  0001 C CNN
-	1    4750 3200
-	1    0    0    -1  
-$EndComp
 Text Notes 4450 2800 0    118  ~ 0
 Voltage Sensor
 Text Label 4750 3050 0    50   ~ 0
@@ -926,7 +896,7 @@ Wire Wire Line
 	4750 4450 4750 4050
 Text Notes 5250 3050 0    50   ~ 0
 max 80V
-Text Notes 9200 3950 0    50   ~ 0
+Text Notes 10300 3850 0    50   ~ 0
 max 80V
 Text Notes 5300 3500 0    50   ~ 0
 (0 to 5V)\n
@@ -937,57 +907,45 @@ Wire Wire Line
 	4750 3500 4400 3500
 Wire Wire Line
 	4400 3500 4400 3750
-Wire Wire Line
-	5800 1700 5800 2000
-Text Label 5800 2000 1    50   ~ 0
-LED-
-Wire Wire Line
-	5400 2250 5700 2250
-Text Label 5700 2250 2    50   ~ 0
-LED-
 Text Label 3700 1400 0    50   ~ 0
 C_SENSOR
 Connection ~ 4650 1400
-Wire Wire Line
-	4250 1700 4250 2000
-Text Label 4250 2000 1    50   ~ 0
-LED-
 $Comp
 L Custom_Library:PinSocket_1x4 U13
 U 1 1 5E9927B0
-P 7600 4500
-F 0 "U13" H 7800 3550 50  0000 R CNN
-F 1 "PinSocket_1x4" H 7800 3650 50  0000 R CNN
-F 2 "Custom_footprint_lib:custom_pinsocket_1x04_p2.54" H 7600 4500 50  0001 C CNN
-F 3 "" H 7600 4500 50  0001 C CNN
-	1    7600 4500
+P 7200 4100
+F 0 "U13" H 7400 3150 50  0000 R CNN
+F 1 "PinSocket_1x4" H 7400 3250 50  0000 R CNN
+F 2 "Custom_footprint_lib:custom_pinsocket_1x04_p2.54" H 7200 4100 50  0001 C CNN
+F 3 "" H 7200 4100 50  0001 C CNN
+	1    7200 4100
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	7300 4100 6900 4100
+	6900 3700 6500 3700
 Wire Wire Line
-	7300 3800 6900 3800
-Text Label 6900 4100 0    50   ~ 0
+	6900 3400 6500 3400
+Text Label 6500 3700 0    50   ~ 0
 SWIM
-Text Label 6900 3800 0    50   ~ 0
+Text Label 6500 3400 0    50   ~ 0
 RESET
 $Comp
 L power:GND #PWR0103
 U 1 1 5E9FD433
-P 6950 3950
-F 0 "#PWR0103" H 6950 3700 50  0001 C CNN
-F 1 "GND" H 6955 3777 50  0000 C CNN
-F 2 "" H 6950 3950 50  0001 C CNN
-F 3 "" H 6950 3950 50  0001 C CNN
-	1    6950 3950
+P 6550 3550
+F 0 "#PWR0103" H 6550 3300 50  0001 C CNN
+F 1 "GND" H 6555 3377 50  0000 C CNN
+F 2 "" H 6550 3550 50  0001 C CNN
+F 3 "" H 6550 3550 50  0001 C CNN
+	1    6550 3550
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	6950 3950 7300 3950
-Text Label 7300 4250 2    50   ~ 0
+	6550 3550 6900 3550
+Text Label 6900 3850 2    50   ~ 0
 5V_SUPPLY
 Wire Wire Line
-	6900 4250 7300 4250
+	6500 3850 6900 3850
 $Comp
 L Device:C C10
 U 1 1 5EA22692
@@ -1103,17 +1061,17 @@ $EndComp
 $Comp
 L power:GND #PWR0108
 U 1 1 5E7CE938
-P 7800 3350
-F 0 "#PWR0108" H 7800 3100 50  0001 C CNN
-F 1 "GND" H 7805 3177 50  0000 C CNN
-F 2 "" H 7800 3350 50  0001 C CNN
-F 3 "" H 7800 3350 50  0001 C CNN
-	1    7800 3350
+P 7400 2950
+F 0 "#PWR0108" H 7400 2700 50  0001 C CNN
+F 1 "GND" H 7405 2777 50  0000 C CNN
+F 2 "" H 7400 2950 50  0001 C CNN
+F 3 "" H 7400 2950 50  0001 C CNN
+	1    7400 2950
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	7000 3350 7350 3350
-Text Label 7000 3350 0    50   ~ 0
+	6600 2950 6950 2950
+Text Label 6600 2950 0    50   ~ 0
 LED-
 $Comp
 L power:GND #PWR0109
@@ -1135,16 +1093,99 @@ Connection ~ 4050 5900
 Wire Wire Line
 	4050 5900 4100 5900
 Wire Wire Line
-	7750 3350 7800 3350
+	7350 2950 7400 2950
 $Comp
 L Jumper:Jumper_2_Open JP1
 U 1 1 5E84B2E4
-P 7550 3350
-F 0 "JP1" H 7550 3585 50  0000 C CNN
-F 1 "Jumper_2_Open" H 7550 3494 50  0000 C CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7550 3350 50  0001 C CNN
-F 3 "~" H 7550 3350 50  0001 C CNN
-	1    7550 3350
+P 7150 2950
+F 0 "JP1" H 7150 3185 50  0000 C CNN
+F 1 "Jumper_2_Open" H 7150 3094 50  0000 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Open_TrianglePad1.0x1.5mm" H 7150 2950 50  0001 C CNN
+F 3 "~" H 7150 2950 50  0001 C CNN
+	1    7150 2950
 	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 1850 6100 1850
+Text Label 6150 1850 0    50   ~ 0
+LED-
+Wire Wire Line
+	6100 1700 6100 1850
+$Comp
+L power:GND #PWR?
+U 1 1 5FB5CA1C
+P 6100 2000
+F 0 "#PWR?" H 6100 1750 50  0001 C CNN
+F 1 "GND" H 6105 1827 50  0000 C CNN
+F 2 "" H 6100 2000 50  0001 C CNN
+F 3 "" H 6100 2000 50  0001 C CNN
+	1    6100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2000 6100 1850
+Connection ~ 6100 1850
+$Comp
+L power:GND #PWR?
+U 1 1 5FB7DBB9
+P 5800 1850
+F 0 "#PWR?" H 5800 1600 50  0001 C CNN
+F 1 "GND" H 5805 1677 50  0000 C CNN
+F 2 "" H 5800 1850 50  0001 C CNN
+F 3 "" H 5800 1850 50  0001 C CNN
+	1    5800 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 1850 5800 1700
+$Comp
+L power:GND #PWR?
+U 1 1 5FB87DEB
+P 5400 2400
+F 0 "#PWR?" H 5400 2150 50  0001 C CNN
+F 1 "GND" H 5405 2227 50  0000 C CNN
+F 2 "" H 5400 2400 50  0001 C CNN
+F 3 "" H 5400 2400 50  0001 C CNN
+	1    5400 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2400 5400 2250
+$Comp
+L power:GND #PWR?
+U 1 1 5FB918D1
+P 4250 1850
+F 0 "#PWR?" H 4250 1600 50  0001 C CNN
+F 1 "GND" H 4255 1677 50  0000 C CNN
+F 2 "" H 4250 1850 50  0001 C CNN
+F 3 "" H 4250 1850 50  0001 C CNN
+	1    4250 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 1850 4250 1700
+$Comp
+L Device:R R13
+U 1 1 5E8FADD1
+P 4750 3200
+F 0 "R13" V 4543 3200 50  0000 C CNN
+F 1 "R" V 4634 3200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4680 3200 50  0001 C CNN
+F 3 "~" H 4750 3200 50  0001 C CNN
+	1    4750 3200
+	1    0    0    -1  
+$EndComp
+Text Notes 6400 2550 0    118  ~ 0
+Swim Debugging port
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FB97485
+P 10400 4300
+F 0 "U?" H 10250 4400 50  0000 L CNN
+F 1 "SMD_2062" H 10150 4300 50  0000 L CNN
+F 2 "Custom_footprint_lib:LEDSMD2062" H 10400 4300 50  0001 C CNN
+F 3 "" H 10400 4300 50  0001 C CNN
+	1    10400 4300
+	-1   0    0    1   
 $EndComp
 $EndSCHEMATC
