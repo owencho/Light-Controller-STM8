@@ -1,0 +1,701 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RF_Module:ESP32-WROOM-32 U1
+U 1 1 5FD331AD
+P 7100 -2850
+F 0 "U1" H 7100 -1269 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 7100 -1360 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 7100 -4350 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 6800 -2800 50  0001 C CNN
+	1    7100 -2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Interface_UART:MAX1487E U2
+U 1 1 5FD3EF4E
+P 9300 -2900
+F 0 "U2" H 9550 -2300 50  0000 C CNN
+F 1 "MAX1487E" H 9550 -2400 50  0000 C CNN
+F 2 "" H 9300 -3600 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 9300 -2850 50  0001 C CNN
+	1    9300 -2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 -2700 7800 -2700
+Wire Wire Line
+	7800 -2700 7800 -2950
+Wire Wire Line
+	7800 -2950 7700 -2950
+Wire Wire Line
+	7700 -2650 8350 -2650
+Wire Wire Line
+	8350 -2650 8350 -2900
+Wire Wire Line
+	8350 -2900 8700 -2900
+Wire Wire Line
+	8900 -2800 8700 -2800
+Wire Wire Line
+	8700 -2800 8700 -2900
+Connection ~ 8700 -2900
+Wire Wire Line
+	8700 -2900 8900 -2900
+Wire Wire Line
+	7100 -4250 7100 -4700
+$Comp
+L Device:R R1
+U 1 1 5FD49C0B
+P 8200 -3800
+F 0 "R1" H 8270 -3754 50  0000 L CNN
+F 1 "R" H 8270 -3845 50  0000 L CNN
+F 2 "" V 8130 -3800 50  0001 C CNN
+F 3 "~" H 8200 -3800 50  0001 C CNN
+	1    8200 -3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 -3950 8900 -3000
+Wire Wire Line
+	8200 -3950 8900 -3950
+$Comp
+L Device:R R2
+U 1 1 5FD4D125
+P 8200 -3350
+F 0 "R2" H 8270 -3304 50  0000 L CNN
+F 1 "R" H 8270 -3395 50  0000 L CNN
+F 2 "" V 8130 -3350 50  0001 C CNN
+F 3 "~" H 8200 -3350 50  0001 C CNN
+	1    8200 -3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 -3650 8200 -3550
+$Comp
+L power:GND #PWR05
+U 1 1 5FD4DF60
+P 9300 -2300
+F 0 "#PWR05" H 9300 -2550 50  0001 C CNN
+F 1 "GND" H 9305 -2473 50  0000 C CNN
+F 2 "" H 9300 -2300 50  0001 C CNN
+F 3 "" H 9300 -2300 50  0001 C CNN
+	1    9300 -2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5FD4F174
+P 9300 -3400
+F 0 "#PWR04" H 9300 -3550 50  0001 C CNN
+F 1 "+5V" H 9315 -3227 50  0000 C CNN
+F 2 "" H 9300 -3400 50  0001 C CNN
+F 3 "" H 9300 -3400 50  0001 C CNN
+	1    9300 -3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR01
+U 1 1 5FD527D2
+P 7100 -4700
+F 0 "#PWR01" H 7100 -4850 50  0001 C CNN
+F 1 "+3.3V" H 7115 -4527 50  0000 C CNN
+F 2 "" H 7100 -4700 50  0001 C CNN
+F 3 "" H 7100 -4700 50  0001 C CNN
+	1    7100 -4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5FD53FF7
+P 7100 -1400
+F 0 "#PWR02" H 7100 -1650 50  0001 C CNN
+F 1 "GND" H 7105 -1573 50  0000 C CNN
+F 2 "" H 7100 -1400 50  0001 C CNN
+F 3 "" H 7100 -1400 50  0001 C CNN
+	1    7100 -1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 -1450 7100 -1400
+$Comp
+L power:GND #PWR03
+U 1 1 5FD562D8
+P 8200 -3100
+F 0 "#PWR03" H 8200 -3350 50  0001 C CNN
+F 1 "GND" H 8205 -3273 50  0000 C CNN
+F 2 "" H 8200 -3100 50  0001 C CNN
+F 3 "" H 8200 -3100 50  0001 C CNN
+	1    8200 -3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 -3200 8200 -3100
+Wire Wire Line
+	8200 -3550 7850 -3550
+Wire Wire Line
+	7850 -3550 7850 -3050
+Wire Wire Line
+	7850 -3050 7700 -3050
+Connection ~ 8200 -3550
+Wire Wire Line
+	8200 -3550 8200 -3500
+Text Notes 7800 -4200 0    50   ~ 0
+Voltage divider reduce from 5V to 3.3V on \nthe UART receive pin to avoid pin burnt\n
+Wire Wire Line
+	9700 -3000 10300 -3000
+Wire Wire Line
+	9700 -2700 10300 -2700
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FD59613
+P 10700 -2600
+F 0 "U?" H 10331 -2871 50  0000 R CNN
+F 1 "SMD_2062" H 10331 -2780 50  0000 R CNN
+F 2 "" H 10600 -2600 50  0001 C CNN
+F 3 "" H 10600 -2600 50  0001 C CNN
+	1    10700 -2600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	10450 -2900 10300 -2900
+Wire Wire Line
+	10300 -2900 10300 -3000
+Wire Wire Line
+	10300 -2700 10300 -2750
+Wire Wire Line
+	10300 -2750 10450 -2750
+Text Notes 10200 -3100 0    50   ~ 0
+To STM32 through daisy chain
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FD68088
+P 2300 1200
+F 0 "U?" H 2262 1315 50  0000 C CNN
+F 1 "SMD_2062" H 2262 1224 50  0000 C CNN
+F 2 "" H 2200 1200 50  0001 C CNN
+F 3 "" H 2200 1200 50  0001 C CNN
+	1    2300 1200
+	1    0    0    -1  
+$EndComp
+Text Label 2900 1350 0    50   ~ 0
+12V
+$Comp
+L power:GND #PWR?
+U 1 1 5FD6B1AA
+P 2650 1550
+F 0 "#PWR?" H 2650 1300 50  0001 C CNN
+F 1 "GND" H 2655 1377 50  0000 C CNN
+F 2 "" H 2650 1550 50  0001 C CNN
+F 3 "" H 2650 1550 50  0001 C CNN
+	1    2650 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1500 2650 1500
+Wire Wire Line
+	2650 1500 2650 1550
+$Comp
+L Interface_UART:MAX1487E U?
+U 1 1 5FD70BBE
+P 8600 3200
+F 0 "U?" H 8850 3800 50  0000 C CNN
+F 1 "MAX1487E" H 8850 3700 50  0000 C CNN
+F 2 "" H 8600 2500 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 8600 3250 50  0001 C CNN
+	1    8600 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 3300 8000 3300
+Wire Wire Line
+	8000 3300 8000 3200
+Connection ~ 8000 3200
+Wire Wire Line
+	8000 3200 8200 3200
+$Comp
+L Device:R R?
+U 1 1 5FD70BCC
+P 7500 2300
+F 0 "R?" H 7570 2346 50  0000 L CNN
+F 1 "R" H 7570 2255 50  0000 L CNN
+F 2 "" V 7430 2300 50  0001 C CNN
+F 3 "~" H 7500 2300 50  0001 C CNN
+	1    7500 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2150 8200 3100
+Wire Wire Line
+	7500 2150 8200 2150
+$Comp
+L Device:R R?
+U 1 1 5FD70BD4
+P 7500 2750
+F 0 "R?" H 7570 2796 50  0000 L CNN
+F 1 "R" H 7570 2705 50  0000 L CNN
+F 2 "" V 7430 2750 50  0001 C CNN
+F 3 "~" H 7500 2750 50  0001 C CNN
+	1    7500 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2450 7500 2550
+$Comp
+L power:GND #PWR?
+U 1 1 5FD70BDB
+P 8600 3800
+F 0 "#PWR?" H 8600 3550 50  0001 C CNN
+F 1 "GND" H 8605 3627 50  0000 C CNN
+F 2 "" H 8600 3800 50  0001 C CNN
+F 3 "" H 8600 3800 50  0001 C CNN
+	1    8600 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FD70BE1
+P 8600 2700
+F 0 "#PWR?" H 8600 2550 50  0001 C CNN
+F 1 "+5V" H 8615 2873 50  0000 C CNN
+F 2 "" H 8600 2700 50  0001 C CNN
+F 3 "" H 8600 2700 50  0001 C CNN
+	1    8600 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FD70BE7
+P 7500 3000
+F 0 "#PWR?" H 7500 2750 50  0001 C CNN
+F 1 "GND" H 7505 2827 50  0000 C CNN
+F 2 "" H 7500 3000 50  0001 C CNN
+F 3 "" H 7500 3000 50  0001 C CNN
+	1    7500 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 2900 7500 3000
+Connection ~ 7500 2550
+Wire Wire Line
+	7500 2550 7500 2600
+Text Notes 7100 1900 0    50   ~ 0
+Voltage divider reduce from 5V to 3.3V on \nthe UART receive pin to avoid pin burnt\n
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FD70BF4
+P 10000 3500
+F 0 "U?" H 9631 3229 50  0000 R CNN
+F 1 "SMD_2062" H 9631 3320 50  0000 R CNN
+F 2 "" H 9900 3500 50  0001 C CNN
+F 3 "" H 9900 3500 50  0001 C CNN
+	1    10000 3500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	9750 3200 9600 3200
+Wire Wire Line
+	9600 3200 9600 3100
+Wire Wire Line
+	9600 3400 9600 3350
+Wire Wire Line
+	9600 3350 9750 3350
+Text Notes 9500 3000 0    50   ~ 0
+from ESP32 through daisy chain
+Wire Wire Line
+	6250 4350 6800 4350
+Wire Wire Line
+	6800 4350 6800 2550
+Wire Wire Line
+	6800 2550 7500 2550
+Wire Wire Line
+	7100 3400 7100 4250
+$Comp
+L Regulator_Linear:AMS1117-3.3 U?
+U 1 1 5FD835BD
+P 4650 1400
+F 0 "U?" H 4650 1642 50  0000 C CNN
+F 1 "AMS1117-3.3" H 4650 1551 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 4650 1600 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 4750 1150 50  0001 C CNN
+	1    4650 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1350 3000 1350
+$Comp
+L power:GND #PWR?
+U 1 1 5FD8BC45
+P 5550 5350
+F 0 "#PWR?" H 5550 5100 50  0001 C CNN
+F 1 "GND" H 5555 5177 50  0000 C CNN
+F 2 "" H 5550 5350 50  0001 C CNN
+F 3 "" H 5550 5350 50  0001 C CNN
+	1    5550 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 5350 5550 5050
+$Comp
+L power:GND #PWR?
+U 1 1 5FD91600
+P 4650 1750
+F 0 "#PWR?" H 4650 1500 50  0001 C CNN
+F 1 "GND" H 4655 1577 50  0000 C CNN
+F 2 "" H 4650 1750 50  0001 C CNN
+F 3 "" H 4650 1750 50  0001 C CNN
+	1    4650 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 1700 4650 1750
+Wire Wire Line
+	9000 3100 9600 3100
+Wire Wire Line
+	9000 3400 9600 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5FD9B75C
+P 3550 2600
+F 0 "#PWR?" H 3550 2350 50  0001 C CNN
+F 1 "GND" H 3555 2427 50  0000 C CNN
+F 2 "" H 3550 2600 50  0001 C CNN
+F 3 "" H 3550 2600 50  0001 C CNN
+	1    3550 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3550 2550 3550 2600
+$Comp
+L Regulator_Linear:AMS1117-5.0 U?
+U 1 1 5FDA204F
+P 3550 2250
+F 0 "U?" H 3550 2492 50  0000 C CNN
+F 1 "AMS1117-5.0" H 3550 2401 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 3550 2450 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 3650 2000 50  0001 C CNN
+	1    3550 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 2300 3450 2300
+Wire Wire Line
+	3250 2250 3000 2250
+Wire Wire Line
+	3000 2250 3000 1350
+$Comp
+L MCU_ST_STM32F1:STM32F103C6Tx U?
+U 1 1 5FD65FBE
+P 5650 3550
+F 0 "U?" H 6150 1950 50  0000 C CNN
+F 1 "STM32F103C6Tx" H 6150 1850 50  0000 C CNN
+F 2 "Package_QFP:LQFP-48_7x7mm_P0.5mm" H 5050 2150 50  0001 R CNN
+F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00210843.pdf" H 5650 3550 50  0001 C CNN
+	1    5650 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FDB43CD
+P 4000 2150
+F 0 "#PWR?" H 4000 2000 50  0001 C CNN
+F 1 "+5V" H 4015 2323 50  0000 C CNN
+F 2 "" H 4000 2150 50  0001 C CNN
+F 3 "" H 4000 2150 50  0001 C CNN
+	1    4000 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2150 4000 2250
+Wire Wire Line
+	4000 2250 3850 2250
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FDB9566
+P 1500 2600
+F 0 "U?" H 1462 2715 50  0000 C CNN
+F 1 "SMD_2062" H 1462 2624 50  0000 C CNN
+F 2 "" H 1400 2600 50  0001 C CNN
+F 3 "" H 1400 2600 50  0001 C CNN
+	1    1500 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5FDBC274
+P 1900 2600
+F 0 "#PWR?" H 1900 2450 50  0001 C CNN
+F 1 "+5V" H 1915 2773 50  0000 C CNN
+F 2 "" H 1900 2600 50  0001 C CNN
+F 3 "" H 1900 2600 50  0001 C CNN
+	1    1900 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 2600 1900 2750
+Wire Wire Line
+	1900 2750 1750 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5FDD225C
+P 1900 2950
+F 0 "#PWR?" H 1900 2700 50  0001 C CNN
+F 1 "GND" H 1905 2777 50  0000 C CNN
+F 2 "" H 1900 2950 50  0001 C CNN
+F 3 "" H 1900 2950 50  0001 C CNN
+	1    1900 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1750 2900 1900 2900
+Wire Wire Line
+	1900 2900 1900 2950
+Text Notes 1050 2300 0    50   ~ 0
+external 5V supply for \nSTM8 on opto isolator
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5FDEE18A
+P 2550 4450
+F 0 "K?" V 1983 4450 50  0000 C CNN
+F 1 "SANYOU_SRD_Form_C" V 2074 4450 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 3000 4400 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 2550 4450 50  0001 C CNN
+	1    2550 4450
+	0    -1   1    0   
+$EndComp
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FDF4381
+P 1300 4600
+F 0 "U?" H 1262 4715 50  0000 C CNN
+F 1 "SMD_2062" H 1262 4624 50  0000 C CNN
+F 2 "" H 1200 4600 50  0001 C CNN
+F 3 "" H 1200 4600 50  0001 C CNN
+	1    1300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2850 4250 4950 4250
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5FE023B6
+P 2550 5550
+F 0 "K?" V 1983 5550 50  0000 C CNN
+F 1 "SANYOU_SRD_Form_C" V 2074 5550 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 3000 5500 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 2550 5550 50  0001 C CNN
+	1    2550 5550
+	0    -1   1    0   
+$EndComp
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FE023BC
+P 1250 5700
+F 0 "U?" H 1212 5815 50  0000 C CNN
+F 1 "SMD_2062" H 1212 5724 50  0000 C CNN
+F 2 "" H 1150 5700 50  0001 C CNN
+F 3 "" H 1150 5700 50  0001 C CNN
+	1    1250 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4350 3600 4350
+Wire Wire Line
+	3600 4350 3600 5350
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FE0E552
+P 4650 6000
+F 0 "U?" H 4281 5729 50  0000 R CNN
+F 1 "SMD_2062" H 4281 5820 50  0000 R CNN
+F 2 "" H 4550 6000 50  0001 C CNN
+F 3 "" H 4550 6000 50  0001 C CNN
+	1    4650 6000
+	-1   0    0    1   
+$EndComp
+Text Notes 4450 5500 0    50   ~ 0
+250V ac source\n
+Wire Wire Line
+	4400 5700 4050 5700
+Text Label 4050 5700 0    50   ~ 0
+250V
+Wire Wire Line
+	4400 5850 4050 5850
+Text Label 4050 5850 0    50   ~ 0
+250V_GND
+Text Label 3050 4650 0    50   ~ 0
+250V
+Wire Wire Line
+	2850 4650 3400 4650
+Wire Wire Line
+	2850 5350 3600 5350
+Wire Wire Line
+	1550 4750 2250 4750
+Wire Wire Line
+	1900 4900 1550 4900
+Text Label 1550 4900 0    50   ~ 0
+250V_GND
+Wire Wire Line
+	1850 6000 1500 6000
+Text Label 1500 6000 0    50   ~ 0
+250V_GND
+Wire Wire Line
+	1500 5850 2250 5850
+Text Label 3050 5750 0    50   ~ 0
+250V
+Wire Wire Line
+	2850 5750 3400 5750
+$Comp
+L power:GND #PWR?
+U 1 1 5FE4EB62
+P 2150 4300
+F 0 "#PWR?" H 2150 4050 50  0001 C CNN
+F 1 "GND" H 2155 4127 50  0000 C CNN
+F 2 "" H 2150 4300 50  0001 C CNN
+F 3 "" H 2150 4300 50  0001 C CNN
+	1    2150 4300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2150 4250 2150 4300
+Wire Wire Line
+	2250 4250 2150 4250
+$Comp
+L power:GND #PWR?
+U 1 1 5FE54D2A
+P 2100 5400
+F 0 "#PWR?" H 2100 5150 50  0001 C CNN
+F 1 "GND" H 2105 5227 50  0000 C CNN
+F 2 "" H 2100 5400 50  0001 C CNN
+F 3 "" H 2100 5400 50  0001 C CNN
+	1    2100 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 5350 2100 5400
+Wire Wire Line
+	2100 5350 2250 5350
+$Comp
+L Relay:SANYOU_SRD_Form_C K?
+U 1 1 5FE61039
+P 2550 6750
+F 0 "K?" V 1983 6750 50  0000 C CNN
+F 1 "SANYOU_SRD_Form_C" V 2074 6750 50  0000 C CNN
+F 2 "Relay_THT:Relay_SPDT_SANYOU_SRD_Series_Form_C" H 3000 6700 50  0001 L CNN
+F 3 "http://www.sanyourelay.ca/public/products/pdf/SRD.pdf" H 2550 6750 50  0001 C CNN
+	1    2550 6750
+	0    -1   1    0   
+$EndComp
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FE6103F
+P 1250 6900
+F 0 "U?" H 1212 7015 50  0000 C CNN
+F 1 "SMD_2062" H 1212 6924 50  0000 C CNN
+F 2 "" H 1150 6900 50  0001 C CNN
+F 3 "" H 1150 6900 50  0001 C CNN
+	1    1250 6900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 7200 1500 7200
+Text Label 1500 7200 0    50   ~ 0
+250V_GND
+Wire Wire Line
+	1500 7050 2250 7050
+Text Label 3050 6950 0    50   ~ 0
+250V
+Wire Wire Line
+	2850 6950 3400 6950
+$Comp
+L power:GND #PWR?
+U 1 1 5FE6104B
+P 2100 6600
+F 0 "#PWR?" H 2100 6350 50  0001 C CNN
+F 1 "GND" H 2105 6427 50  0000 C CNN
+F 2 "" H 2100 6600 50  0001 C CNN
+F 3 "" H 2100 6600 50  0001 C CNN
+	1    2100 6600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 6550 2100 6600
+Wire Wire Line
+	2100 6550 2250 6550
+Wire Wire Line
+	4950 4450 3650 4450
+Wire Wire Line
+	3650 4450 3650 6550
+Wire Wire Line
+	2850 6550 3650 6550
+Text Notes 2050 950  0    50   ~ 0
+12V supply\n
+Wire Wire Line
+	4350 1400 4150 1400
+Wire Wire Line
+	4150 1400 4150 2250
+Wire Wire Line
+	4150 2250 4000 2250
+Connection ~ 4000 2250
+Wire Wire Line
+	4950 1400 5550 1400
+Wire Wire Line
+	5550 1400 5550 2050
+$Comp
+L Custom_Library:SMD_2062 U?
+U 1 1 5FED405D
+P 1500 3950
+F 0 "U?" H 1131 3679 50  0000 R CNN
+F 1 "SMD_2062" H 1131 3770 50  0000 R CNN
+F 2 "" H 1400 3950 50  0001 C CNN
+F 3 "" H 1400 3950 50  0001 C CNN
+	1    1500 3950
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	1750 3800 1850 3800
+Wire Wire Line
+	1850 3800 1850 3650
+Connection ~ 1850 3650
+Wire Wire Line
+	1850 3650 1750 3650
+Wire Wire Line
+	1850 3650 2050 3650
+Text Label 2050 3650 0    50   ~ 0
+TXRX_STM8
+Wire Wire Line
+	6250 3550 6400 3550
+Text Label 6450 3550 0    50   ~ 0
+TXRX_STM8
+Wire Wire Line
+	6250 4250 7100 4250
+Wire Wire Line
+	7100 3400 8200 3400
+Wire Wire Line
+	7000 3200 7000 4150
+Wire Wire Line
+	7000 3200 8000 3200
+Wire Wire Line
+	6250 4150 7000 4150
+Wire Wire Line
+	6250 3650 6400 3650
+Wire Wire Line
+	6400 3650 6400 3550
+Connection ~ 6400 3550
+Wire Wire Line
+	6400 3550 6450 3550
+Text Notes 1050 3500 0    50   ~ 0
+usart transmission to STM8\n
+$EndSCHEMATC

@@ -164,7 +164,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 1350 6550 1350
 Text Notes 6450 2300 0    50   ~ 0
-gain 100 to 600
+gain 160\n
 Wire Wire Line
 	7950 1350 7950 1250
 Wire Wire Line
