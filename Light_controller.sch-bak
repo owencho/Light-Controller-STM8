@@ -386,17 +386,6 @@ F 3 "" H 8450 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Custom_Library:PH2.0_horizontal U10
-U 1 1 5E74E69C
-P 6750 7850
-F 0 "U10" H 6978 7701 50  0000 L CNN
-F 1 "PH2.0_horizontal" H 6978 7610 50  0000 L CNN
-F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 6750 7850 50  0001 C CNN
-F 3 "" H 6750 7850 50  0001 C CNN
-	1    6750 7850
-	1    0    0    -1  
-$EndComp
-$Comp
 L Custom_Library:PH2.0_horizontal U11
 U 1 1 5E74F107
 P 14450 6100
@@ -978,8 +967,6 @@ Text Label 14250 4400 0    50   ~ 0
 LED_SENSE
 Text Label 5350 1500 0    50   ~ 0
 12V_INPUT
-Wire Wire Line
-	6600 1800 7450 1800
 Wire Wire Line
 	7000 1950 7000 1300
 Wire Wire Line
@@ -1678,335 +1665,361 @@ Wire Wire Line
 Wire Wire Line
 	-3950 9150 -3550 9150
 Connection ~ -3950 9150
-Wire Wire Line
-	2200 7150 2200 7200
-$Comp
-L Device:R R?
-U 1 1 5FDDCDBD
-P 2350 7150
-F 0 "R?" V 2143 7150 50  0000 C CNN
-F 1 "1.5k" V 2234 7150 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2280 7150 50  0001 C CNN
-F 3 "~" H 2350 7150 50  0001 C CNN
-	1    2350 7150
-	0    -1   -1   0   
-$EndComp
-Text Label 3450 6050 0    50   ~ 0
-TX_in
-Wire Wire Line
-	2550 6250 2500 6250
-Text Label 2350 6250 2    50   ~ 0
-UART_RX
-Wire Wire Line
-	2550 7150 2500 7150
-$Comp
-L power:GND #PWR?
-U 1 1 5FDDCDC7
-P 2200 7200
-F 0 "#PWR?" H 2200 6950 50  0001 C CNN
-F 1 "GND" H 2205 7027 50  0000 C CNN
-F 2 "" H 2200 7200 50  0001 C CNN
-F 3 "" H 2200 7200 50  0001 C CNN
-	1    2200 7200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1850 6950 2550 6950
-Text Label 2050 6950 0    50   ~ 0
-UART_TX
-Text Notes 2450 5450 0    50   ~ 0
-Different Power Domain
-Text Notes 2300 5600 0    50   ~ 0
-LDO 5V
-Text Notes 3150 5600 0    50   ~ 0
-External 5V
-Wire Wire Line
-	2500 6550 2500 6600
-$Comp
-L Device:R R?
-U 1 1 5FDDCDD3
-P 2500 6400
-F 0 "R?" H 2350 6450 50  0000 C CNN
-F 1 "600" H 2350 6350 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 6400 50  0001 C CNN
-F 3 "~" H 2500 6400 50  0001 C CNN
-	1    2500 6400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5FDDCDD9
-P 2500 6600
-F 0 "#PWR?" H 2500 6350 50  0001 C CNN
-F 1 "GND" H 2505 6427 50  0000 C CNN
-F 2 "" H 2500 6600 50  0001 C CNN
-F 3 "" H 2500 6600 50  0001 C CNN
-	1    2500 6600
-	1    0    0    -1  
-$EndComp
-Connection ~ 2500 6250
-Wire Wire Line
-	1750 6250 2500 6250
-Wire Wire Line
-	3200 7150 3150 7150
-$Comp
-L Device:C C?
-U 1 1 5FDDCDE3
-P 3950 6900
-F 0 "C?" H 3750 7100 50  0000 L CNN
-F 1 "470uF" H 3650 7000 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 3988 6750 50  0001 C CNN
-F 3 "~" H 3950 6900 50  0001 C CNN
-F 4 "6.3x7.7mm" H 3450 6900 50  0000 L CNN "size"
-	1    3950 6900
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	3150 6950 3200 6950
-Wire Wire Line
-	3200 6950 3200 6750
-Wire Wire Line
-	3600 6550 3600 6250
-Text Label 3600 6250 3    50   ~ 0
-EXT_GND
-$Comp
-L Device:R R?
-U 1 1 5FDDCDEE
-P 3300 6250
-F 0 "R?" V 3093 6250 50  0000 C CNN
-F 1 "1.5k" V 3184 6250 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3230 6250 50  0001 C CNN
-F 3 "~" H 3300 6250 50  0001 C CNN
-	1    3300 6250
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3600 6250 3450 6250
-Text Label 2500 6050 2    50   ~ 0
-5V_SUPPLY
-$Comp
-L Custom_Library:EL357N-C U?
-U 1 1 5FDDCDF6
-P 2850 6800
-F 0 "U?" H 2850 6875 50  0000 C CNN
-F 1 "EL357N-C" H 2850 6784 50  0000 C CNN
-F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 2850 6800 50  0001 C CNN
-F 3 "" H 2850 6800 50  0001 C CNN
-	1    2850 6800
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2050 6050 2500 6050
-$Comp
-L Custom_Library:EL357N-C U?
-U 1 1 5FDDCDFD
-P 2850 5900
-F 0 "U?" H 2850 5975 50  0000 C CNN
-F 1 "EL357N-C" H 2850 5884 50  0000 C CNN
-F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 2850 5900 50  0001 C CNN
-F 3 "" H 2850 5900 50  0001 C CNN
-	1    2850 5900
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	3550 6750 3950 6750
-Connection ~ 3550 6750
-Text Notes 1400 5200 0    118  ~ 0
-opto_isolator for UART V3\n\n
-$Comp
-L Device:C C?
-U 1 1 5FDDCE09
-P 3550 6900
-F 0 "C?" H 3700 7000 50  0000 C CNN
-F 1 "1nF" H 3700 6900 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 3588 6750 50  0001 C CNN
-F 3 "~" H 3550 6900 50  0001 C CNN
-	1    3550 6900
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 5FDDCE0F
-P 2500 5900
-F 0 "C?" V 2650 6000 50  0000 C CNN
-F 1 "C" V 2650 5900 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2538 5750 50  0001 C CNN
-F 3 "~" H 2500 5900 50  0001 C CNN
-	1    2500 5900
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 5FDDCE15
-P 2400 5750
-F 0 "#PWR?" H 2400 5500 50  0001 C CNN
-F 1 "GND" H 2405 5577 50  0000 C CNN
-F 2 "" H 2400 5750 50  0001 C CNN
-F 3 "" H 2400 5750 50  0001 C CNN
-	1    2400 5750
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	2400 5750 2500 5750
-Connection ~ 2500 6050
-Wire Wire Line
-	2500 6050 2550 6050
-Wire Wire Line
-	3550 7350 3550 7050
-Text Label 3550 7050 3    50   ~ 0
-EXT_GND
-Wire Wire Line
-	3950 7350 3950 7050
-Text Label 3950 7050 3    50   ~ 0
-EXT_GND
-Text Label 4350 6600 1    50   ~ 0
-5V_EXT
-Wire Wire Line
-	4350 6150 4350 6750
-Wire Wire Line
-	3950 6750 4350 6750
-Connection ~ 3950 6750
-Wire Wire Line
-	3200 6750 3350 6750
 Text Label 13450 2000 0    50   ~ 0
 UART_TX_EN
 Wire Wire Line
 	13450 2000 13950 2000
-Wire Wire Line
-	2100 8150 2100 8200
 $Comp
 L Device:R R?
-U 1 1 5FE7D563
-P 2250 8150
-F 0 "R?" V 2043 8150 50  0000 C CNN
-F 1 "1.5k" V 2134 8150 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 2180 8150 50  0001 C CNN
-F 3 "~" H 2250 8150 50  0001 C CNN
-	1    2250 8150
+U 1 1 5FE48BDC
+P 7250 1800
+F 0 "R?" V 7450 1800 50  0000 C CNN
+F 1 "600" V 7350 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 7180 1800 50  0001 C CNN
+F 3 "~" H 7250 1800 50  0001 C CNN
+	1    7250 1800
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2450 8150 2400 8150
-$Comp
-L power:GND #PWR?
-U 1 1 5FE7D56A
-P 2100 8200
-F 0 "#PWR?" H 2100 7950 50  0001 C CNN
-F 1 "GND" H 2105 8027 50  0000 C CNN
-F 2 "" H 2100 8200 50  0001 C CNN
-F 3 "" H 2100 8200 50  0001 C CNN
-	1    2100 8200
-	1    0    0    -1  
-$EndComp
+	7400 1800 7450 1800
 Wire Wire Line
-	1750 7950 2450 7950
-Text Label 1950 7950 0    50   ~ 0
-UART_TX_EN
-$Comp
-L Custom_Library:EL357N-C U?
-U 1 1 5FE7D572
-P 2750 7800
-F 0 "U?" H 2750 7875 50  0000 C CNN
-F 1 "EL357N-C" H 2750 7784 50  0000 C CNN
-F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 2750 7800 50  0001 C CNN
-F 3 "" H 2750 7800 50  0001 C CNN
-	1    2750 7800
-	1    0    0    -1  
-$EndComp
+	7100 1800 6600 1800
 Wire Wire Line
-	3350 7950 3050 7950
-Connection ~ 3350 6750
+	3350 4850 4100 4850
 Wire Wire Line
-	3350 6750 3550 6750
-$Comp
-L Interface_UART:MAX1487E U?
-U 1 1 5FEA42D2
-P 5900 7950
-F 0 "U?" H 5900 8631 50  0000 C CNN
-F 1 "MAX1487E" H 5900 8540 50  0000 C CNN
-F 2 "" H 5900 7250 50  0001 C CNN
-F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 5900 8000 50  0001 C CNN
-	1    5900 7950
-	1    0    0    -1  
-$EndComp
+	4100 4850 4150 4850
+Connection ~ 4100 4850
 Wire Wire Line
-	3350 6750 3350 7450
-Connection ~ 3350 7450
-Wire Wire Line
-	3350 7450 3350 7950
-Wire Wire Line
-	5900 8850 5900 8550
-Text Label 5900 8550 3    50   ~ 0
+	4700 6750 6350 6750
+Text Label 4700 7050 3    50   ~ 0
 EXT_GND
 Wire Wire Line
-	4750 8150 4750 7950
+	4700 7350 4700 7050
 Wire Wire Line
-	4750 7950 5150 7950
+	4700 6750 4650 6750
+Connection ~ 4700 6750
 Wire Wire Line
-	5500 8050 5150 8050
+	4800 7050 6700 7050
+Text Label 4800 7350 3    50   ~ 0
+EXT_GND
 Wire Wire Line
-	5150 8050 5150 7950
-Connection ~ 5150 7950
+	4800 7650 4800 7350
+Connection ~ 4800 7050
 Wire Wire Line
-	5150 7950 5500 7950
-Wire Wire Line
-	3350 7450 5900 7450
-Wire Wire Line
-	5350 6050 5350 7850
-Wire Wire Line
-	5350 7850 5500 7850
-Wire Wire Line
-	3150 6050 5350 6050
-Wire Wire Line
-	5100 8150 5100 8450
-Wire Wire Line
-	3200 8450 3200 7150
-Wire Wire Line
-	6500 7950 6300 7950
-Wire Wire Line
-	6300 7950 6300 7850
-Wire Wire Line
-	6500 8100 6300 8100
-Wire Wire Line
-	6300 8100 6300 8150
-$Comp
-L Device:R R?
-U 1 1 5FFFA58A
-P 3200 8600
-F 0 "R?" V 2993 8600 50  0000 C CNN
-F 1 "1.5k" V 3084 8600 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3130 8600 50  0001 C CNN
-F 3 "~" H 3200 8600 50  0001 C CNN
-	1    3200 8600
-	-1   0    0    1   
-$EndComp
+	6700 6750 7100 6750
 $Comp
 L Device:R R?
 U 1 1 60034794
-P 3100 8300
-F 0 "R?" V 2893 8300 50  0000 C CNN
-F 1 "1.5k" V 2984 8300 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" V 3030 8300 50  0001 C CNN
-F 3 "~" H 3100 8300 50  0001 C CNN
-	1    3100 8300
+P 4700 6900
+F 0 "R?" V 4493 6900 50  0000 C CNN
+F 1 "600" V 4584 6900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4630 6900 50  0001 C CNN
+F 3 "~" H 4700 6900 50  0001 C CNN
+	1    4700 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FFFA58A
+P 4800 7200
+F 0 "R?" V 4593 7200 50  0000 C CNN
+F 1 "600" V 4684 7200 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4730 7200 50  0001 C CNN
+F 3 "~" H 4800 7200 50  0001 C CNN
+	1    4800 7200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7900 6700 7900 6750
+Wire Wire Line
+	8100 6700 7900 6700
+Wire Wire Line
+	7900 6550 7900 6450
+Wire Wire Line
+	8100 6550 7900 6550
+Wire Wire Line
+	4800 7050 4800 5750
+Wire Wire Line
+	6700 6750 6700 7050
+Wire Wire Line
+	4750 4650 6950 4650
+Wire Wire Line
+	6950 6450 7100 6450
+Wire Wire Line
+	6950 4650 6950 6450
+Wire Wire Line
+	4950 6050 7500 6050
+Wire Wire Line
+	6750 6550 7100 6550
+Connection ~ 6750 6550
+Wire Wire Line
+	6750 6650 6750 6550
+Wire Wire Line
+	7100 6650 6750 6650
+Wire Wire Line
+	6350 6550 6750 6550
+Wire Wire Line
+	6350 6750 6350 6550
+Text Label 7500 7150 3    50   ~ 0
+EXT_GND
+Wire Wire Line
+	7500 7450 7500 7150
+Wire Wire Line
+	4950 6050 4950 6550
+Connection ~ 4950 6050
+Wire Wire Line
+	4950 5350 4950 6050
+$Comp
+L Interface_UART:MAX1487E U?
+U 1 1 5FEA42D2
+P 7500 6550
+F 0 "U?" H 7500 7231 50  0000 C CNN
+F 1 "MAX1487E" H 7500 7140 50  0000 C CNN
+F 2 "" H 7500 5850 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 7500 6600 50  0001 C CNN
+	1    7500 6550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	5100 8150 5500 8150
-Connection ~ 3200 8450
+	4950 5350 5150 5350
+Connection ~ 4950 5350
 Wire Wire Line
-	3200 9050 3200 8750
-Text Label 3200 8750 3    50   ~ 0
+	4950 6550 4650 6550
+$Comp
+L Custom_Library:EL357N-C U?
+U 1 1 5FE7D572
+P 4350 6400
+F 0 "U?" H 4350 6475 50  0000 C CNN
+F 1 "EL357N-C" H 4350 6384 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 4350 6400 50  0001 C CNN
+F 3 "" H 4350 6400 50  0001 C CNN
+	1    4350 6400
+	1    0    0    -1  
+$EndComp
+Text Label 3550 6550 0    50   ~ 0
+UART_TX_EN
+Wire Wire Line
+	3350 6550 4050 6550
+$Comp
+L power:GND #PWR?
+U 1 1 5FE7D56A
+P 3700 6800
+F 0 "#PWR?" H 3700 6550 50  0001 C CNN
+F 1 "GND" H 3705 6627 50  0000 C CNN
+F 2 "" H 3700 6800 50  0001 C CNN
+F 3 "" H 3700 6800 50  0001 C CNN
+	1    3700 6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4050 6750 4000 6750
+$Comp
+L Device:R R?
+U 1 1 5FE7D563
+P 3850 6750
+F 0 "R?" V 3643 6750 50  0000 C CNN
+F 1 "1.5k" V 3734 6750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3780 6750 50  0001 C CNN
+F 3 "~" H 3850 6750 50  0001 C CNN
+	1    3850 6750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3700 6750 3700 6800
+Wire Wire Line
+	4800 5350 4950 5350
+Connection ~ 5550 5350
+Wire Wire Line
+	5550 5350 5950 5350
+Wire Wire Line
+	5950 4750 5950 5350
+Text Label 5950 5200 1    50   ~ 0
+5V_EXT
+Text Label 5550 5650 3    50   ~ 0
 EXT_GND
 Wire Wire Line
-	3200 8450 5100 8450
-Connection ~ 3100 8150
-Wire Wire Line
-	3100 8150 3050 8150
-Wire Wire Line
-	3100 8750 3100 8450
-Text Label 3100 8450 3    50   ~ 0
+	5550 5950 5550 5650
+Text Label 5150 5650 3    50   ~ 0
 EXT_GND
 Wire Wire Line
-	3100 8150 4750 8150
+	5150 5950 5150 5650
+Wire Wire Line
+	4100 4650 4150 4650
+Connection ~ 4100 4650
+Wire Wire Line
+	4000 4350 4100 4350
+$Comp
+L power:GND #PWR?
+U 1 1 5FDDCE15
+P 4000 4350
+F 0 "#PWR?" H 4000 4100 50  0001 C CNN
+F 1 "GND" H 4005 4177 50  0000 C CNN
+F 2 "" H 4000 4350 50  0001 C CNN
+F 3 "" H 4000 4350 50  0001 C CNN
+	1    4000 4350
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FDDCE0F
+P 4100 4500
+F 0 "C?" V 4250 4600 50  0000 C CNN
+F 1 "C" V 4250 4500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4138 4350 50  0001 C CNN
+F 3 "~" H 4100 4500 50  0001 C CNN
+	1    4100 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5FDDCE09
+P 5150 5500
+F 0 "C?" H 5300 5600 50  0000 C CNN
+F 1 "1nF" H 5300 5500 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5188 5350 50  0001 C CNN
+F 3 "~" H 5150 5500 50  0001 C CNN
+	1    5150 5500
+	1    0    0    -1  
+$EndComp
+Text Notes 3000 3800 0    118  ~ 0
+opto_isolator for UART V3\n\n
+Connection ~ 5150 5350
+Wire Wire Line
+	5150 5350 5550 5350
+$Comp
+L Custom_Library:EL357N-C U?
+U 1 1 5FDDCDFD
+P 4450 4500
+F 0 "U?" H 4450 4575 50  0000 C CNN
+F 1 "EL357N-C" H 4450 4484 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 4450 4500 50  0001 C CNN
+F 3 "" H 4450 4500 50  0001 C CNN
+	1    4450 4500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 4650 4100 4650
+$Comp
+L Custom_Library:EL357N-C U?
+U 1 1 5FDDCDF6
+P 4450 5400
+F 0 "U?" H 4450 5475 50  0000 C CNN
+F 1 "EL357N-C" H 4450 5384 50  0000 C CNN
+F 2 "Package_SO:SOP-4_3.8x4.1mm_P2.54mm" H 4450 5400 50  0001 C CNN
+F 3 "" H 4450 5400 50  0001 C CNN
+	1    4450 5400
+	1    0    0    -1  
+$EndComp
+Text Label 4100 4650 2    50   ~ 0
+5V_SUPPLY
+Wire Wire Line
+	5200 4850 5050 4850
+$Comp
+L Device:R R?
+U 1 1 5FDDCDEE
+P 4100 5000
+F 0 "R?" V 3893 5000 50  0000 C CNN
+F 1 "1.5k" V 3984 5000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4030 5000 50  0001 C CNN
+F 3 "~" H 4100 5000 50  0001 C CNN
+	1    4100 5000
+	-1   0    0    1   
+$EndComp
+Text Label 5200 4850 3    50   ~ 0
+EXT_GND
+Wire Wire Line
+	5200 5150 5200 4850
+Wire Wire Line
+	4800 5550 4800 5350
+Wire Wire Line
+	4750 5550 4800 5550
+$Comp
+L Device:C C?
+U 1 1 5FDDCDE3
+P 5550 5500
+F 0 "C?" H 5350 5700 50  0000 L CNN
+F 1 "470uF" H 5250 5600 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 5588 5350 50  0001 C CNN
+F 3 "~" H 5550 5500 50  0001 C CNN
+F 4 "6.3x7.7mm" H 5050 5500 50  0000 L CNN "size"
+	1    5550 5500
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4800 5750 4750 5750
+$Comp
+L power:GND #PWR?
+U 1 1 5FDDCDD9
+P 4100 5200
+F 0 "#PWR?" H 4100 4950 50  0001 C CNN
+F 1 "GND" H 4105 5027 50  0000 C CNN
+F 2 "" H 4100 5200 50  0001 C CNN
+F 3 "" H 4100 5200 50  0001 C CNN
+	1    4100 5200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FDDCDD3
+P 4900 4850
+F 0 "R?" H 4750 4900 50  0000 C CNN
+F 1 "600" H 4750 4800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 4830 4850 50  0001 C CNN
+F 3 "~" H 4900 4850 50  0001 C CNN
+	1    4900 4850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4100 5150 4100 5200
+Text Notes 4750 4200 0    50   ~ 0
+External 5V
+Text Notes 3900 4200 0    50   ~ 0
+LDO 5V
+Text Notes 4050 4050 0    50   ~ 0
+Different Power Domain
+Text Label 3650 5550 0    50   ~ 0
+UART_TX
+Wire Wire Line
+	3450 5550 4150 5550
+$Comp
+L power:GND #PWR?
+U 1 1 5FDDCDC7
+P 3800 5800
+F 0 "#PWR?" H 3800 5550 50  0001 C CNN
+F 1 "GND" H 3805 5627 50  0000 C CNN
+F 2 "" H 3800 5800 50  0001 C CNN
+F 3 "" H 3800 5800 50  0001 C CNN
+	1    3800 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 5750 4100 5750
+Text Label 3950 4850 2    50   ~ 0
+UART_RX
+Text Label 5050 4650 0    50   ~ 0
+TX_in
+$Comp
+L Device:R R?
+U 1 1 5FDDCDBD
+P 3950 5750
+F 0 "R?" V 3743 5750 50  0000 C CNN
+F 1 "1.5k" V 3834 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3880 5750 50  0001 C CNN
+F 3 "~" H 3950 5750 50  0001 C CNN
+	1    3950 5750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3800 5750 3800 5800
+$Comp
+L Custom_Library:PH2.0_horizontal U10
+U 1 1 5E74E69C
+P 8350 6450
+F 0 "U10" H 8578 6301 50  0000 L CNN
+F 1 "PH2.0_horizontal" H 8578 6210 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_S2B-PH-SM4-TB_1x02-1MP_P2.00mm_Horizontal" H 8350 6450 50  0001 C CNN
+F 3 "" H 8350 6450 50  0001 C CNN
+	1    8350 6450
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
